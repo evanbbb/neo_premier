@@ -17,7 +17,7 @@
 - [x] **Task 10** — `brand-evolver` skill
 - [x] **Task 12** — `image-art-director` skill
 - [x] **Task 13** — `key-art-composer` skill
-- [ ] **Task 15** — `image-reviewer` skill
+- [x] **Task 15** — `image-reviewer` skill
 - [ ] **Task 16** — `robot-fidelity-checker` skill
 - [ ] **Task 17** — Capstone example (`examples/season-1-launch/`)
 - [ ] **Task 18** — Keep heavy media (images/video) out of the repo (external-media strategy)
