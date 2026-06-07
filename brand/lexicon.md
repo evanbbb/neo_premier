@@ -9,8 +9,8 @@ source: derived from voice + foundation
 # Lexicon & Naming
 
 The specific words the Neo Premier League uses, the words it bans, and how it names things. Used
-by every text skill — especially [`name-forge`](../skills/name-forge/SKILL.md) and
-[`voice-linter`](../skills/voice-linter/SKILL.md).
+by every text skill — especially [`name-forge`](../skills/name-forge/SKILL.md) (naming
+conventions) and [`copy-reviewer`](../skills/copy-reviewer/SKILL.md) (banned words).
 
 ## Words & phrases we use
 

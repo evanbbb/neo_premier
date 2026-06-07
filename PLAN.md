@@ -15,7 +15,6 @@
 - [x] **Task 8** — `voice-rewriter` skill
 - [x] **Task 9** — `campaign-strategist` skill
 - [x] **Task 10** — `brand-evolver` skill
-- [ ] **Task 11** — `voice-linter` skill
 - [ ] **Task 12** — `image-art-director` skill
 - [ ] **Task 13** — `key-art-composer` skill
 - [ ] **Task 14** — `variation-generator` skill
@@ -44,7 +43,7 @@ split between skills that **generate**, skills that **govern/review**, and a ski
 **transforms the brand itself** — kept flat and teachable.
 
 **Outcome:** (1) a deep, well-organized brand definition as a single shared source, (2) a curated
-set of hero assets the user selects, (3) twelve LLM-based "skills" across text and image, and
+set of hero assets the user selects, (3) eleven LLM-based "skills" across text and image, and
 (4) worked examples — all reusable and designed to teach separation of concerns.
 
 ## Decisions
@@ -103,7 +102,6 @@ neo_premier/
 │   ├── campaign-strategist/SKILL.md
 │   ├── brand-evolver/SKILL.md
 │   ├── copy-reviewer/SKILL.md
-│   ├── voice-linter/SKILL.md
 │   ├── image-art-director/SKILL.md
 │   ├── key-art-composer/SKILL.md
 │   ├── variation-generator/SKILL.md
@@ -117,7 +115,7 @@ Every file in `brand/` gets light **YAML frontmatter** (`title`, `type`, `status
 `source`) above prose — the human reads the prose, a machine/skill reads the frontmatter. This is
 the core "machine-readable" lesson, kept deliberately simple.
 
-## The twelve skills
+## The eleven skills
 
 Each is a folder with a `SKILL.md` using the same frontmatter format as a Claude Code skill
 (`name`, `description`). Each opens with a **`## Brand inputs`** section naming the brand files it
@@ -149,22 +147,20 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
 **Text — governance**
 6. **copy-reviewer** — scores any copy against the brand. Brand inputs: `voice.md`,
    `anti-patterns.md`. Criteria PASS/FAIL → ON / BORDERLINE / OFF brand verdict + fixes.
-7. **voice-linter** — fast inline pass flagging banned words, clichés, off-voice phrases. Brand
-   inputs: `lexicon.md`, `anti-patterns.md`.
 
 **Image — generation**
-8. **image-art-director** — structured image-gen prompt (subject, robot ref, style refs,
+7. **image-art-director** — structured image-gen prompt (subject, robot ref, style refs,
    composition, palette, surface, negative prompt). Brand inputs: the `visual/*.md` files.
-9. **key-art-composer** — art-direction brief for a surface (poster / social key art / thumbnail):
+8. **key-art-composer** — art-direction brief for a surface (poster / social key art / thumbnail):
    layout, focal hierarchy, type placement, shape-language usage, asset callouts. Brand inputs:
    `identity.md`, `typography.md` + hero assets.
-10. **variation-generator** — N on-brand prompt variations from one concept. Brand inputs: the
-    `visual/*.md` files.
+9. **variation-generator** — N on-brand prompt variations from one concept. Brand inputs: the
+   `visual/*.md` files.
 
 **Image — governance (multimodal)**
-11. **image-reviewer** — reads an actual image and scores it against the `visual/*.md` files
+10. **image-reviewer** — reads an actual image and scores it against the `visual/*.md` files
     (palette, type, shape language, robot fidelity, anti-patterns) → verdict.
-12. **robot-fidelity-checker** — focused multimodal check: is the mascot on-model? Brand inputs:
+11. **robot-fidelity-checker** — focused multimodal check: is the mascot on-model? Brand inputs:
     `robot-character.md` + the curated robot refs in `assets/robot/`.
 
 ## Build sequence (commit after every task)
@@ -173,8 +169,8 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
 2. **Scaffold repo** (tree, `README.md`, `CLAUDE.md`) → commit "Scaffold repo structure".
 3. **Author `brand/*.md`** (text only) → commit "Add brand text definitions".
 4. **Capture visuals from user + assets** → commit "Add visual identity + hero assets".
-5–16. **Twelve skills, one at a time** in order: brand-writer, name-forge, voice-rewriter,
-   campaign-strategist, brand-evolver, copy-reviewer, voice-linter, image-art-director,
+5–16. **Eleven skills, one at a time** in order: brand-writer, name-forge, voice-rewriter,
+   campaign-strategist, brand-evolver, copy-reviewer, image-art-director,
    key-art-composer, variation-generator, image-reviewer, robot-fidelity-checker. Pause for review
    after each → commit "Add `<skill-name>` skill". (brand-writer + copy-reviewer first as the
    reference patterns.)

@@ -43,7 +43,7 @@ two ways:
 
 - **Generate (text):** `brand-writer`, `name-forge`, `voice-rewriter`
 - **Strategy (text):** `campaign-strategist`
-- **Govern / review (text):** `copy-reviewer`, `voice-linter`
+- **Govern / review (text):** `copy-reviewer`
 - **Transform the brand:** `brand-evolver`
 - **Generate (image):** `image-art-director`, `key-art-composer`, `variation-generator`
 - **Govern / review (image):** `image-reviewer`, `robot-fidelity-checker`

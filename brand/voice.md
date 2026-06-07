@@ -10,7 +10,7 @@ source: Brand Details.txt (tone keywords), Brand Writer.txt (voice + examples)
 
 How the Neo Premier League sounds. **This is the canonical writing style guide** — the single
 source every text skill shares so they never work against each other. `brand-writer` (generate),
-`voice-rewriter` (transform), `copy-reviewer` and `voice-linter` (govern) all read this same file,
+`voice-rewriter` (transform), and `copy-reviewer` (govern) all read this same file,
 paired with [`lexicon.md`](lexicon.md) (specific words), [`anti-patterns.md`](anti-patterns.md)
 (what to avoid), and the relevant [`surfaces/`](surfaces/) spec (length + register). Generation and
 review judge against the same rules by construction. Edit the style here, once, and every text skill

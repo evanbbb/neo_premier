@@ -14,7 +14,6 @@ both in Claude Code (agent reads the files) and in a web chatbot (user attaches 
 | `campaign-strategist` | strategy | text | Generates marketing campaign ideas for an objective. |
 | `brand-evolver` | brand-transform | text | Edits the canonical brand and logs the change. |
 | `copy-reviewer` | governance | text | Scores any copy for brand fit → verdict + fixes. |
-| `voice-linter` | governance | text | Flags banned words, clichés, off-voice phrases. |
 | `image-art-director` | generation | image | Builds an on-brand image-generation prompt. |
 | `key-art-composer` | generation | image | Art-direction brief / layout for a surface. |
 | `variation-generator` | generation | image | N on-brand prompt variations from one concept. |
