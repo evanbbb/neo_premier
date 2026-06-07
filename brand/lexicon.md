@@ -59,7 +59,8 @@ Punchy, visceral, broadcast-callable — the kind of name a commentator screams.
 
 ### House style for names
 - Prefer hard consonants and momentum over soft, abstract coinages.
-- Avoid literal robotics jargon as a name (no "Unit-7 Demo Bot").
+- Engineering/robotics jargon and model designations are welcome — they read as engineered and
+  on-brand. Just don't sound like a sterile lab demo (it's a fighter, not a "Demo Bot").
 - A great name works on a jersey, a bracket, and a commentator's lips.
 
 ## Capitalization & house style
