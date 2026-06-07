@@ -22,6 +22,7 @@
 - [ ] **Task 15** — `image-reviewer` skill
 - [ ] **Task 16** — `robot-fidelity-checker` skill
 - [ ] **Task 17** — Capstone example (`examples/season-1-launch/`)
+- [ ] **Task 18** — Keep heavy media (images/video) out of the repo (external-media strategy)
 
 **Working rules:** commit after every task • build skills one at a time and pause for review •
 visuals (hex, fonts, hero assets) are supplied by the user, never inferred • skills reference
@@ -178,6 +179,12 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
    after each → commit "Add `<skill-name>` skill". (brand-writer + copy-reviewer first as the
    reference patterns.)
 17. **Capstone example** → commit "Add worked example".
+18. **External-media strategy** — keep full-res images and all video **outside** the repo so it
+    doesn't balloon. In-repo: a machine-readable **asset manifest** (id, description, dimensions,
+    external location) + optional small thumbnails/proxies. Decide mechanism with the user (Git
+    LFS vs external store + manifest vs `.gitignore` + manifest), add `.gitignore` rules for binary
+    media, reconcile the existing `assets/` hero set, and point image skills + `assets/README.md`
+    at the manifest rather than committed binaries → commit "Add external-media asset strategy".
 
 ## Verification
 
