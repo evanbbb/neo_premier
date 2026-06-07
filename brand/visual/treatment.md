@@ -3,7 +3,7 @@ title: Treatment
 type: visual-treatment
 status: active
 updated: 2026-06-06
-source: curated key-art in assets/style/
+source: curated key-art in the media library (see assets/manifest.json)
 ---
 
 # Treatment
@@ -19,7 +19,7 @@ signal is breaking under the speed of the moment.
 - **Direction:** primarily horizontal streaks; can trail off one edge of the figure.
 - **Intensity:** purposeful, not total — enough to convey speed/signal, never so much the athlete
   is lost. Tie the tear to motion (a kick, a header).
-- **Reference:** `assets/style/key-art-hero.png`, `assets/style/key-art-header.png`.
+- **Reference:** `key-art-hero`, `key-art-header` (media library).
 
 ## 2. HUD / telemetry overlay
 
@@ -29,7 +29,7 @@ packet counts, registration ticks, vertical side text.
 
 - Sits at the edges and corners; frames, never crowds.
 - Set small, in `ash`/`graphite`, monospace.
-- **Reference:** `assets/style/key-art-poster.png`.
+- **Reference:** `key-art-poster` (media library).
 
 ## 3. Grit / xerox
 

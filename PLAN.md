@@ -20,7 +20,7 @@
 - [x] **Task 15** — `image-reviewer` skill
 - [x] **Task 16** — `robot-fidelity-checker` skill
 - [x] **Task 17** — Capstone example (`examples/season-1-launch/`)
-- [ ] **Task 18** — Keep heavy media (images/video) out of the repo (external-media strategy)
+- [x] **Task 18** — Keep heavy media (images/video) out of the repo (external-media strategy)
 
 **Working rules:** commit after every task • build skills one at a time and pause for review •
 visuals (hex, fonts, hero assets) are supplied by the user, never inferred • skills reference
@@ -47,8 +47,8 @@ set of hero assets the user selects, (3) ten LLM-based "skills" across text and 
 
 ## Decisions
 
-- **Location:** this git repo. A *curated* set of hero assets is copied in; the large raw working
-  folder stays put elsewhere as the source archive (not moved/deleted).
+- **Location:** this git repo for all text/structure. **No media in the repo** — all images and
+  video live in a public Dropbox media library, indexed by `assets/manifest.json` (see Task 18).
 - **Plan lives in the repo:** this file (`PLAN.md`) is the durable plan.
 - **Brand depth:** author the **full deep set** of net-new on-brand *text* content (beliefs,
   voice do/don'ts, lexicon, naming, messaging, anti-patterns).
@@ -88,11 +88,9 @@ neo_premier/
 │   │   └── treatment.md      #   grit / xerox / glitch photographic treatment
 │   └── decisions/            #   ◀ audit trail: brand-evolver writes dated change records
 │       └── README.md         #     (e.g. 2026-06-06-grit-over-nasa.md) — the brand evolves
-├── assets/                   # curated HERO assets (USER-SELECTED), not the raw dump
-│   ├── README.md             #   what each asset is + its source path
-│   ├── robot/                #   selected mascot hero shots
-│   ├── style/                #   selected look refs
-│   └── reference/            #   refs that inform the brand
+├── assets/                   # NO binaries — pointer to the public media library (Dropbox)
+│   ├── README.md             #   how to get media + the asset-id table
+│   └── manifest.json         #   machine-readable index: asset id -> media library
 ├── skills/                   # LLM-based tools — Claude Code SKILL.md format
 │   ├── README.md             #   catalog: generation / governance / brand-transform × text/image
 │   ├── brand-writer/SKILL.md
@@ -156,8 +154,8 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
 9. **image-reviewer** — reads an actual image and scores it against the `visual/*.md` files
    (palette, type, shape language, robot fidelity, anti-patterns) → verdict.
 10. **robot-fidelity-checker** — focused multimodal check: is the mascot on-model? Compares the
-    render **image-to-image** against approved reference images (from `assets/robot/` or attached) —
-    not against the text spec. JSON verdict.
+    render **image-to-image** against approved reference images (from the media library or attached)
+    — not against the text spec. JSON verdict.
 
 ## Potential microtools (build later)
 
@@ -179,12 +177,11 @@ Smaller, optional skills parked for a future pass — not part of the core set a
    after each → commit "Add `<skill-name>` skill". (brand-writer + copy-reviewer first as the
    reference patterns.)
 17. **Capstone example** → commit "Add worked example".
-18. **External-media strategy** — keep full-res images and all video **outside** the repo so it
-    doesn't balloon. In-repo: a machine-readable **asset manifest** (id, description, dimensions,
-    external location) + optional small thumbnails/proxies. Decide mechanism with the user (Git
-    LFS vs external store + manifest vs `.gitignore` + manifest), add `.gitignore` rules for binary
-    media, reconcile the existing `assets/` hero set, and point image skills + `assets/README.md`
-    at the manifest rather than committed binaries → commit "Add external-media asset strategy".
+18. **External-media strategy** *(chosen: fully external — public Dropbox media library).* No
+    binaries in the repo: removed the committed hero set, added `.gitignore` for image/video types,
+    and `assets/manifest.json` indexes every asset by `id` and points to the public media library.
+    Brand files + skills reference assets by **id** (resolved via the manifest), the way skills
+    reference brand files by filename → commit "Add external-media asset strategy".
 
 ## Verification
 
@@ -197,5 +194,6 @@ Smaller, optional skills parked for a future pass — not part of the core set a
   `image-reviewer`; both produce a verdict in the defined format.
 - **Brand-transform safety:** `brand-evolver` edits the right `brand/*` file(s) AND writes a dated
   `brand/decisions/<date>-<slug>.md` record (no silent canon edits).
-- **Assets:** every file in `assets/` is non-duplicate and listed in `assets/README.md` with its
-  origin; total `assets/` size is small (hero set only).
+- **No media in the repo:** `git ls-files` lists no image/video binaries; `assets/` holds only
+  `README.md` + `manifest.json`, and every asset `id` in the manifest resolves to the public media
+  library. Asset references elsewhere use ids, not committed file paths.

@@ -23,7 +23,7 @@ A brand book is usually a PDF a human reads once. Here the brand is **code**:
 | Folder | What it holds |
 | --- | --- |
 | [`brand/`](brand/) | The canonical brand definition — one fact per file (foundation, voice, lexicon, visual system, …). |
-| [`assets/`](assets/) | A curated set of hero assets (the robot, the look). The single place to grab approved visuals. |
+| [`assets/`](assets/) | A manifest pointing to the **public media library** (Dropbox) where all images + video live. No binaries are committed. |
 | [`skills/`](skills/) | LLM tools that **generate**, **govern/review**, and **transform** the brand. |
 | [`examples/`](examples/) | Worked outputs showing the skills used together. |
 | [`PLAN.md`](PLAN.md) | The build plan and progress checklist. |

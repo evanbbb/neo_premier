@@ -1,0 +1,15 @@
+{
+  "media_library": "https://www.dropbox.com/scl/fo/vj5i6qmw8o88kjkiqpmnk/AA95hhKryhzA89U27g142b0?rlkey=ys426o4603970s2m6nqm7lyne&st=snhoww7a&dl=0",
+  "note": "All Neo Premier League media (images + video) lives in the public media library above. No binaries are committed to this repo. Reference assets by `id`; download them from the library, or attach them when running a skill in a web chatbot.",
+  "assets": [
+    { "id": "archetype",         "category": "robot", "type": "image", "role": "canonical character reference", "description": "Bare matte-black robot — the base every pose derives from." },
+    { "id": "hoodie",            "category": "robot", "type": "image", "role": "look",      "description": "Robot in a black athletic hoodie, full body." },
+    { "id": "hoodie-portrait",   "category": "robot", "type": "image", "role": "hero",      "description": "Hooded camera-bar head portrait — the iconic 'face' shot." },
+    { "id": "pose-uniform",      "category": "robot", "type": "image", "role": "kit",       "description": "Robot standing in the white chevron match kit." },
+    { "id": "pose-volley",       "category": "robot", "type": "image", "role": "action",    "description": "Action: side volley with the ball." },
+    { "id": "pose-bicycle-kick", "category": "robot", "type": "image", "role": "action",    "description": "Action: bicycle kick." },
+    { "id": "key-art-hero",      "category": "style", "type": "image", "role": "treatment", "description": "Hooded portrait with heavy glitch/datamosh tear — hero treatment." },
+    { "id": "key-art-header",    "category": "style", "type": "image", "role": "treatment", "description": "Two robots contesting a header over a stadium, glitch + telemetry." },
+    { "id": "key-art-poster",    "category": "style", "type": "image", "role": "system",    "description": "Finished 'NEO_STYLE' poster — shows the overlay/type + HUD system." }
+  ]
+}

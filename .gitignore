@@ -1,0 +1,27 @@
+# Media is NOT stored in this repo. It lives in the public media library (see assets/README.md).
+# Reference assets by id via assets/manifest.json; never commit image or video files.
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.avif
+*.tiff
+*.bmp
+*.psd
+*.svg
+
+# Video
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.avi
+
+# Local media working dir (if you stage downloads from the library)
+media/
+
+# OS / editor cruft
+.DS_Store

@@ -26,6 +26,14 @@ for the human overview and [`PLAN.md`](PLAN.md) for the build plan + progress ch
 - The brand **evolves**: `skills/brand-evolver` edits `brand/` files and appends a dated record to
   `brand/decisions/`. Treat `brand/decisions/` as an append-only audit log — never rewrite history.
 
+## Media lives outside the repo
+
+No images or video are committed. All media lives in a public **media library** (Dropbox), indexed
+by [`assets/manifest.json`](assets/manifest.json). Refer to assets by **id** (e.g. `archetype`,
+`key-art-hero`); the id resolves via the manifest to the library. Binary files are git-ignored —
+never commit images or video. When a skill needs a reference image, download it from the library
+(Claude Code) or attach it (web chatbot).
+
 ## Working norms
 
 - **Commit after each task** (see `PLAN.md`), not in one batch at the end.

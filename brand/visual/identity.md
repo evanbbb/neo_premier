@@ -3,7 +3,7 @@ title: Visual Identity
 type: visual-identity
 status: active
 updated: 2026-06-06
-source: brand owner direction + curated assets in assets/
+source: brand owner direction + curated assets in the media library (see assets/manifest.json)
 ---
 
 # Visual Identity
@@ -33,7 +33,7 @@ dangerous.
 
 ## Shape & overlay language
 
-The recurring graphic vocabulary (seen across `assets/style/` and the match kit):
+The recurring graphic vocabulary (seen across the `key-art-*` assets and the match kit):
 
 - **Chevrons** — sharp downward angle-stacks (the kit's chest mark). Aggression, momentum, rank.
 - **Bars / barcode stripes** — clusters of hard rectangular strokes. Data, speed, signal.
@@ -55,7 +55,9 @@ elements + a telemetry layer + (optionally) a glitch tear.
 
 ## Reference assets
 
-- Hero treatment: `assets/style/key-art-hero.png`
-- Full system on a poster: `assets/style/key-art-poster.png`
-- Match energy: `assets/style/key-art-header.png`
-- The athlete: `assets/robot/` (archetype, hoodie, poses)
+Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json) → the media library.
+
+- Hero treatment: `key-art-hero`
+- Full system on a poster: `key-art-poster`
+- Match energy: `key-art-header`
+- The athlete: `archetype`, `hoodie`, and the `pose-*` assets

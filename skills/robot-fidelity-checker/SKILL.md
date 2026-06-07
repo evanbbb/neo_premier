@@ -18,10 +18,11 @@ image-to-image: it needs the approved robot **images** as ground truth and compa
 test to them. On-model means consistent with the established character across the approved versions,
 allowing for legitimate look changes.
 
-- **Claude Code:** the approved set lives in `assets/robot/` (e.g. `archetype.png`, `hoodie.png`,
-  `pose-uniform.png`).
+- **The approved set** is catalogued in `manifest.json` and lives in the public **media library**
+  (Dropbox) — by id, e.g. `archetype`, `hoodie`, `pose-uniform`.
 - **Web chatbot:** the user **attaches** the approved reference image(s) alongside the image under
   test. More references = a more reliable check.
+- **Claude Code:** download the needed reference(s) from the media library, then run the check.
 
 If no reference images are supplied, **ask for them** — this check does not run against a text
 description.
@@ -29,8 +30,8 @@ description.
 ## Inputs from the user
 
 - **Image** (required) — attached; the render to check.
-- **Approved references** (required, one or more) — attached in a web chatbot, or taken from
-  `assets/robot/` in Claude Code.
+- **Approved references** (required, one or more) — attached in a web chatbot, or downloaded from
+  the media library (see `manifest.json`) in Claude Code.
 
 ## The checks (visual comparison to the approved images)
 

@@ -3,13 +3,14 @@ title: Robot Character
 type: visual-character
 status: active
 updated: 2026-06-06
-source: curated assets in assets/robot/ (archetype = no shirt.png)
+source: approved media library (see assets/manifest.json); archetype = the bare robot
 ---
 
 # Robot Character
 
 The Neo Premier League's athlete and mascot. One consistent character, shown in multiple looks.
-The canonical reference is **`assets/robot/archetype.png`** — every render should trace back to it.
+The canonical reference is the **`archetype`** asset in the media library (see
+[`assets/README.md`](../../assets/README.md)) — every render should trace back to it.
 
 ## The archetype (canonical)
 
@@ -28,13 +29,15 @@ A humanoid robot built like an athlete. Matte **black** throughout, greyscale on
 
 ## Approved looks
 
-| Look | Asset | Use |
+Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json) → the media library.
+
+| Look | Asset id | Use |
 | --- | --- | --- |
-| **Archetype** | `assets/robot/archetype.png` | Canonical reference; "base" character. |
-| **Hoodie (full)** | `assets/robot/hoodie.png` | Streetwear/culture vibe; off-pitch identity. |
-| **Hoodie portrait** | `assets/robot/hoodie-portrait.png` | The iconic head-in-hood shot; avatars, hero. |
-| **Match kit** | `assets/robot/pose-uniform.png` | On-pitch: white chevron jersey + black underlayer/legs. |
-| **Action** | `assets/robot/pose-volley.png`, `assets/robot/pose-bicycle-kick.png` | Dynamic football moments. |
+| **Archetype** | `archetype` | Canonical reference; "base" character. |
+| **Hoodie (full)** | `hoodie` | Streetwear/culture vibe; off-pitch identity. |
+| **Hoodie portrait** | `hoodie-portrait` | The iconic head-in-hood shot; avatars, hero. |
+| **Match kit** | `pose-uniform` | On-pitch: white chevron jersey + black underlayer/legs. |
+| **Action** | `pose-volley`, `pose-bicycle-kick` | Dynamic football moments. |
 
 ## Fidelity rules (on-model checklist)
 

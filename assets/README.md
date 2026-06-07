@@ -1,26 +1,37 @@
-# assets/ — curated hero assets
+# assets/ — the media library pointer
 
-The single place to grab **approved** Neo Premier League visuals. A small, deliberate set selected
-by the brand owner — not a dumping ground. All assets are **greyscale (black & white)**.
+**No media is stored in this repo.** All Neo Premier League images and video live in a single
+**public media library** on Dropbox, so the repo stays lean and never balloons as generated images
+and video accumulate.
 
-Subfolders:
+## Get the media
 
-- `robot/` — the mascot: archetype, hoodie looks, and football poses.
-- `style/` — finished key-art showing the look, treatment, and overlay/type system.
+➡️ **Public media library:**
+<https://www.dropbox.com/scl/fo/vj5i6qmw8o88kjkiqpmnk/AA95hhKryhzA89U27g142b0?rlkey=ys426o4603970s2m6nqm7lyne&st=snhoww7a&dl=0>
 
-## Asset index
+Students and brand users grab any image or video from there. When running an image skill in a web
+chatbot, download what you need and **attach** it.
 
-| File | What it is | Source (Dropbox `…/neo premier brand/`) |
+## How assets are referenced
+
+The repo holds only [`manifest.json`](manifest.json) — a machine-readable index of the approved
+assets. Brand files and skills refer to assets by their **`id`** (e.g. `archetype`, `key-art-hero`),
+exactly the way skills refer to brand files by filename. The id resolves to the manifest entry; the
+actual file lives in the media library above.
+
+This is the same principle the whole repo uses: **reference by name, keep the thing in one place.**
+
+| id | category | what it is |
 | --- | --- | --- |
-| `robot/archetype.png` | **Canonical character.** Bare matte-black robot — the base every pose derives from. | `robot/no shirt.png` |
-| `robot/hoodie.png` | Robot in black athletic hoodie (full body) — a key streetwear vibe. | `robot/hoodie_1.png` |
-| `robot/hoodie-portrait.png` | Hooded camera-bar head portrait — the iconic "face" shot. | `robot/hood potrait.png` |
-| `robot/pose-uniform.png` | Robot standing in the white chevron match kit. | `lesson 8/…20-06-28/lesson-8-simple-1-tbbxuz-dgzfgd.png` |
-| `robot/pose-volley.png` | Action: side volley with the ball. | `lesson 8/…20-06-28/lesson-8-simple-35-ccrxrx-gvquqy.png` |
-| `robot/pose-bicycle-kick.png` | Action: bicycle kick. | `lesson 8/…20-06-28/lesson-8-simple-34-bfvwzx-ssxzst.png` |
-| `style/key-art-hero.png` | Hooded portrait with heavy glitch/datamosh tear — hero treatment. | `style/hf_20260601_000531_e295be34-b64a-445f-8ddc-ad740d09fe69.png` |
-| `style/key-art-header.png` | Two robots contesting a header over a stadium, glitch + telemetry. | `lesson 8/…20-36-22__/lesson-8-simple-1-dwdzzf-retudt.png` |
-| `style/key-art-poster.png` | Finished "NEO_STYLE" poster — shows the overlay/type + HUD system. | `lesson 8/…20-36-22__/lesson-8-simple-2-eyzsdw-ssesuf.png` |
+| `archetype` | robot | Canonical character — the bare matte-black robot. |
+| `hoodie` | robot | Robot in a black athletic hoodie (full body). |
+| `hoodie-portrait` | robot | Hooded camera-bar head portrait (the iconic shot). |
+| `pose-uniform` | robot | Robot standing in the white chevron match kit. |
+| `pose-volley` | robot | Action: side volley. |
+| `pose-bicycle-kick` | robot | Action: bicycle kick. |
+| `key-art-hero` | style | Hooded portrait with heavy glitch tear — hero treatment. |
+| `key-art-header` | style | Two robots contesting a header, glitch + telemetry. |
+| `key-art-poster` | style | Finished "NEO_STYLE" poster — overlay/type + HUD system. |
 
-> Originals remain in the Dropbox source archive; these copies are the approved working set.
-> Visual specifications derived from these assets live in [`../brand/visual/`](../brand/visual/).
+> Binaries are git-ignored (see the repo `.gitignore`). Add new media to the library and a row to
+> `manifest.json`; don't commit image or video files.
