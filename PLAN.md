@@ -1,7 +1,10 @@
 # Neo Premier League — Brand-as-Code
 
 > **This is the source-of-truth plan for the project.** It is intentionally committed to the repo
-> so it survives across sessions. Update the checklist below as work proceeds.
+> so it survives across sessions.
+>
+> **Status: core build complete ✅** (Tasks 1–18). Forward-looking work lives in
+> **[Backlog — future builds](#backlog--future-builds)** and **[Microtools to build](#microtools-to-build)** at the bottom.
 
 ## Progress checklist
 
@@ -150,6 +153,7 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
 8. **key-art-composer** — art-direction brief for a surface (poster / social key art / thumbnail):
    layout, focal hierarchy, type placement, shape-language usage, asset callouts. Brand inputs:
    `identity.md`, `typography.md` + hero assets.
+
 **Image — governance (multimodal)**
 9. **image-reviewer** — reads an actual image and scores it against the `visual/*.md` files
    (palette, type, shape language, robot fidelity, anti-patterns) → verdict.
@@ -157,31 +161,12 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
     render **image-to-image** against approved reference images (from the media library or attached)
     — not against the text spec. JSON verdict.
 
-## Potential microtools (build later)
+## How it was built
 
-Smaller, optional skills parked for a future pass — not part of the core set above.
-
-1. **variation-generator** — from one concept, fan out N on-brand image-prompt variations (vary
-   angle / mood / composition / treatment / surface) for fast exploration — the "design shotgun."
-   Builds on `image-art-director` (underlying image, no type; JSON + attachments).
-
-## Build sequence (commit after every task)
-
-1. **Init repo + persist plan** → commit "Add project plan".
-2. **Scaffold repo** (tree, `README.md`, `CLAUDE.md`) → commit "Scaffold repo structure".
-3. **Author `brand/*.md`** (text only) → commit "Add brand text definitions".
-4. **Capture visuals from user + assets** → commit "Add visual identity + hero assets".
-5–16. **Ten skills, one at a time** in order: brand-writer, name-forge, voice-rewriter,
-   campaign-strategist, brand-evolver, copy-reviewer, image-art-director,
-   key-art-composer, image-reviewer, robot-fidelity-checker. Pause for review
-   after each → commit "Add `<skill-name>` skill". (brand-writer + copy-reviewer first as the
-   reference patterns.)
-17. **Capstone example** → commit "Add worked example".
-18. **External-media strategy** *(chosen: fully external — public Dropbox media library).* No
-    binaries in the repo: removed the committed hero set, added `.gitignore` for image/video types,
-    and `assets/manifest.json` indexes every asset by `id` and points to the public media library.
-    Brand files + skills reference assets by **id** (resolved via the manifest), the way skills
-    reference brand files by filename → commit "Add external-media asset strategy".
+Built in per-task commits (see git history): init + plan → scaffold → brand text → visuals/assets →
+the ten skills one at a time (`brand-writer` + `copy-reviewer` first as the reference patterns) →
+capstone example → external-media strategy (public Dropbox library; assets referenced by id). The
+hero binaries were later purged from git history, so media lives only in the public library.
 
 ## Verification
 
@@ -197,3 +182,33 @@ Smaller, optional skills parked for a future pass — not part of the core set a
 - **No media in the repo:** `git ls-files` lists no image/video binaries; `assets/` holds only
   `README.md` + `manifest.json`, and every asset `id` in the manifest resolves to the public media
   library. Asset references elsewhere use ids, not committed file paths.
+
+## Backlog — future builds
+
+Larger pieces to build next — apps/tools, not part of the core brand source.
+
+1. **Brand MD viewer** — a small viewer that renders the `brand/` markdown (frontmatter + prose)
+   into a browsable, good-looking **brand book**: navigate foundation → beliefs → voice → surfaces →
+   visual, preview assets pulled from the media library, and browse the skills catalog. Turns the
+   machine-readable source into a human-friendly site **without duplicating any content** (it reads
+   the same files). Likely a static site generator over the `brand/` + `skills/` markdown.
+   - *Open questions:* static-site tool vs. a tiny custom app; how to surface asset previews from
+     the Dropbox library; whether to render the `decisions/` log as a changelog timeline.
+
+## Microtools to build
+
+Small, optional, single-purpose LLM skills — nice-to-haves beyond the core ten. Build as needed;
+each should follow the same `SKILL.md` + brand-by-name conventions.
+
+1. **variation-generator** — from one concept, fan out N on-brand image-prompt variations (vary
+   angle / mood / composition / treatment / surface) — the "design shotgun." Builds on
+   `image-art-director` (underlying image, no type; JSON + attachments).
+2. **manifest-entry** — given a new approved asset, generate its `assets/manifest.json` row
+   (id, category, type, role, description) so the media-library index stays consistent.
+3. **commentary-generator** — broadcast-style play-by-play / hype lines for a match moment. Brand
+   inputs: `voice.md`, `lexicon.md`.
+4. **alt-text-writer** — accurate, on-brand alt text for a brand image (accessibility). Multimodal.
+5. **line-tightener** — trim a piece of copy to fit a surface's length limit without losing the
+   voice. Brand inputs: the matching `surfaces/` spec + `voice.md`.
+
+*(Candidates — prune or add freely.)*
