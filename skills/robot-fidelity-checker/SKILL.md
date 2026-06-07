@@ -19,7 +19,7 @@ and compares the render under test to them. On-model means consistent with the e
 across the approved versions, allowing for legitimate look changes (a different team kit).
 
 - **The approved set** is catalogued in `manifest.json` and lives in the public **media library**
-  (Dropbox) — by id, e.g. `robot-solo`, `robot-360`, `kit-01-360`.
+  (Dropbox) — by id, e.g. `robot-solo`, `robot-360`, `black-circuits-360`.
 - **Web chatbot:** the user **attaches** the approved reference image(s) alongside the image under
   test. More references = a more reliable check.
 - **Claude Code:** download the needed reference(s) from the media library, then run the check.
@@ -111,7 +111,7 @@ finish. References: 3 approved images of the matte-black camera-bar robot.)*
 ---
 
 **User input:** *(under test: the matte-black robot in a team kit, camera-bar visor head, exposed
-mechanical legs, greyscale. References: `robot-solo`, `robot-360`, and `kit-04-360`.)*
+mechanical legs, greyscale. References: `robot-solo`, `robot-360`, and `the-assembly-line-360`.)*
 
 ```json
 {

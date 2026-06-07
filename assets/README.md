@@ -15,7 +15,7 @@ chatbot, download what you need and **attach** it.
 ## How assets are referenced
 
 The repo holds only [`manifest.json`](manifest.json) — a machine-readable index of the approved
-assets. Brand files and skills refer to assets by their **`id`** (e.g. `robot-solo`, `kit-03`),
+assets. Brand files and skills refer to assets by their **`id`** (e.g. `robot-solo`, `forge-union`),
 exactly the way skills refer to brand files by filename. The id resolves to the manifest entry; the
 actual file lives in the media library above.
 
@@ -25,8 +25,8 @@ This is the same principle the whole repo uses: **reference by name, keep the th
 | --- | --- | --- |
 | `robot-solo` | robot | Canonical character — the robot on its own, clean front view. |
 | `robot-360` | robot | The robot in 360 (five angles) — the definitive character reference. |
-| `kit-01` … `kit-08` | kit | The **8 team kits** (flat). One per team; all greyscale, each a distinct graphic. |
-| `kit-01-360` … `kit-08-360` | kit | Each team kit shown **on the robot**, in 360. |
+| `black-circuits` … `the-latents` | kit | The **8 team kits** (flat). One per team; all greyscale, each a distinct graphic. |
+| `<team>-360` | kit | Each team kit shown **on the robot**, in 360 (e.g. `forge-union-360`). |
 | `robot-explore-a`, `robot-explore-b` | exploration | 3×3 model exploration grids (reference only). |
 | `key-art-hero` | style | Hooded portrait with heavy glitch tear — hero treatment. |
 | `key-art-header` | style | Two robots contesting a header, glitch + telemetry. |

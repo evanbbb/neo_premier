@@ -22,25 +22,25 @@ the pitch, on a scoreboard, on a jersey.
 - **Shape-language family.** Patterns draw on the brand's [`identity.md`](identity.md) vocabulary —
   chevrons, bars/stripes, halftone gradients, distortion — rendered in black and white.
 
-## The 8 kits
+## The 8 teams & kits
 
-Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json). Each kit has a flat
-(`kit-0N`) and an on-robot 360 (`kit-0N-360`).
+Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json). Each team has a flat
+kit (`<team>`) and an on-robot 360 (`<team>-360`).
 
-| # | Kit id | Identity |
+| Team | Kit id | Identity |
 | --- | --- | --- |
-| 1 | `kit-01` | White; black chevrons + barcode-stripe blocks. |
-| 2 | `kit-02` | Black; all-over white liquid/marble distortion. |
-| 3 | `kit-03` | Black; chrome/metallic petal-burst around the collar and shoulders. |
-| 4 | `kit-04` | White; thin black pinstripes with black ringer trim. |
-| 5 | `kit-05` | White; a horizontal halftone gradient band across the chest. |
-| 6 | `kit-06` | Greyscale; halftone orb motif over a vertical stripe fade. |
-| 7 | `kit-07` | Black/grey; bold diagonal stripes, collared polo cut. |
-| 8 | `kit-08` | Black; white vertical pinstripes with white ringer trim. |
+| **Black Circuits** | `black-circuits` | White; black chevrons + barcode-stripe blocks. |
+| **Rust Saints** | `rust-saints` | Black; all-over white liquid/marble distortion. |
+| **Forge Union** | `forge-union` | Black; chrome/metallic petal-burst around the collar and shoulders. |
+| **The Assembly Line** | `the-assembly-line` | White; thin black pinstripes with black ringer trim. |
+| **Graveyard Shift** | `graveyard-shift` | White; a horizontal halftone gradient band across the chest. |
+| **The Stack FC** | `the-stack-fc` | Greyscale; halftone orb motif over a vertical stripe fade. |
+| **Null State** | `null-state` | Black/grey; bold diagonal stripes, collared polo cut. |
+| **The Latents** | `the-latents` | Black; white vertical pinstripes with white ringer trim. |
 
 ## Notes
 
-- **Team names are not yet assigned.** Names are generated with
-  [`name-forge`](../../skills/name-forge/SKILL.md); pair each name to a kit as teams are finalized.
+- Asset filenames are the **team slug** (e.g. `black-circuits.png`, `black-circuits_360.png`) — not
+  generic numbers — so the file *is* the team.
 - When generating or reviewing kitted imagery, keep the robot **on-model** (camera-bar head, matte
   black, mechanical legs) and the kit **greyscale** — a team is its graphic, never a color.

@@ -51,9 +51,10 @@ Hold all three at once. Drop any one and we become something we refuse to be (se
 
 ## League structure
 
-The league fields **8 teams**, each with its own kit. The kits share one greyscale system but each
-carries a distinct graphic identity — see [`visual/kits.md`](visual/kits.md). Team names are
-generated with [`name-forge`](../skills/name-forge/SKILL.md) and paired to kits as teams are finalized.
+The league fields **8 teams**: **Black Circuits**, **Rust Saints**, **Forge Union**,
+**The Assembly Line**, **Graveyard Shift**, **The Stack FC**, **Null State**, and **The Latents**.
+Each has its own kit — the kits share one greyscale system but each carries a distinct graphic
+identity. See [`visual/kits.md`](visual/kits.md) for the team ↔ kit details.
 
 ## What we are / are not
 

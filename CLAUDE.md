@@ -30,7 +30,7 @@ for the human overview and [`PLAN.md`](PLAN.md) for the build plan + progress ch
 
 No images or video are committed. All media lives in a public **media library** (Dropbox), indexed
 by [`assets/manifest.json`](assets/manifest.json). Refer to assets by **id** (e.g. `robot-solo`,
-`kit-03`); the id resolves via the manifest to the library. Binary files are git-ignored —
+`forge-union`); the id resolves via the manifest to the library. Binary files are git-ignored —
 never commit images or video. When a skill needs a reference image, download it from the library
 (Claude Code) or attach it (web chatbot).
 

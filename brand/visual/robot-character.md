@@ -36,8 +36,8 @@ Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json) → t
 | --- | --- | --- |
 | **Solo** | `robot-solo` | Canonical "base" character, clean front. |
 | **360 turnaround** | `robot-360` | Definitive reference; five angles. |
-| **Team kits** | `kit-01` … `kit-08` | The 8 team kits (flat) — see [`kits.md`](kits.md). |
-| **Kits on robot** | `kit-01-360` … `kit-08-360` | Each kit worn on the robot, in 360. |
+| **Team kits** | `black-circuits` … `the-latents` | The 8 team kits (flat) — see [`kits.md`](kits.md). |
+| **Kits on robot** | `<team>-360` (e.g. `forge-union-360`) | Each kit worn on the robot, in 360. |
 
 The robot wears a team kit on the upper body; the legs stay the robot's matte-black mechanical
 limbs. (The hooded glitch portrait used in treatment lives in the `key-art-hero` style asset.)

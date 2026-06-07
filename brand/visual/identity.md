@@ -60,4 +60,4 @@ Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json) → t
 - Hero treatment: `key-art-hero`
 - Full system on a poster: `key-art-poster`
 - Match energy: `key-art-header`
-- The athlete: `robot-solo`, `robot-360`, and the `kit-01`…`kit-08` team kits (see [`kits.md`](kits.md))
+- The athlete: `robot-solo`, `robot-360`, and the 8 team kits (see [`kits.md`](kits.md))
