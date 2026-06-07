@@ -18,7 +18,7 @@
 - [x] **Task 12** — `image-art-director` skill
 - [x] **Task 13** — `key-art-composer` skill
 - [x] **Task 15** — `image-reviewer` skill
-- [ ] **Task 16** — `robot-fidelity-checker` skill
+- [x] **Task 16** — `robot-fidelity-checker` skill
 - [ ] **Task 17** — Capstone example (`examples/season-1-launch/`)
 - [ ] **Task 18** — Keep heavy media (images/video) out of the repo (external-media strategy)
 
@@ -155,8 +155,9 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
 **Image — governance (multimodal)**
 9. **image-reviewer** — reads an actual image and scores it against the `visual/*.md` files
    (palette, type, shape language, robot fidelity, anti-patterns) → verdict.
-10. **robot-fidelity-checker** — focused multimodal check: is the mascot on-model? Brand inputs:
-    `robot-character.md` + the curated robot refs in `assets/robot/`.
+10. **robot-fidelity-checker** — focused multimodal check: is the mascot on-model? Compares the
+    render **image-to-image** against approved reference images (from `assets/robot/` or attached) —
+    not against the text spec. JSON verdict.
 
 ## Potential microtools (build later)
 
