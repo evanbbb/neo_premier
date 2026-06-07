@@ -5,8 +5,8 @@
 
 ## Progress checklist
 
-- [ ] **Task 1** — Init repo + persist this plan (`PLAN.md`)
-- [ ] **Task 2** — Scaffold repo structure (`README.md`, `CLAUDE.md`, dirs)
+- [x] **Task 1** — Init repo + persist this plan (`PLAN.md`)
+- [x] **Task 2** — Scaffold repo structure (`README.md`, `CLAUDE.md`, dirs)
 - [ ] **Task 3** — Author the text brand source (`brand/*.md`)
 - [ ] **Task 4** — Capture visuals from the user + curate hero assets (`brand/visual/*`, `assets/`)
 - [ ] **Task 5** — `brand-writer` skill
