@@ -203,3 +203,6 @@ each should follow the same `SKILL.md` + brand-by-name conventions.
 1. **variation-generator** — from one concept, fan out N on-brand image-prompt variations (vary
    angle / mood / composition / treatment / surface) — the "design shotgun." Builds on
    `image-art-director` (underlying image, no type; JSON + attachments).
+2. **governance panel of multiple LLMs** — run a governance check (copy or image) across several
+   different LLMs and aggregate their verdicts for a more robust, less single-model-biased call.
+   Builds on `copy-reviewer` / `image-reviewer` (same criteria; panel of judges instead of one).
