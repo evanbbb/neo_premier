@@ -10,7 +10,7 @@
 - [x] **Task 3** — Author the text brand source (`brand/*.md`)
 - [x] **Task 4** — Capture visuals from the user + curate hero assets (`brand/visual/*`, `assets/`)
 - [x] **Task 5** — `brand-writer` skill
-- [ ] **Task 6** — `copy-reviewer` skill
+- [x] **Task 6** — `copy-reviewer` skill
 - [ ] **Task 7** — `name-forge` skill
 - [ ] **Task 8** — `voice-rewriter` skill
 - [ ] **Task 9** — `campaign-strategist` skill
