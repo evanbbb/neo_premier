@@ -19,7 +19,7 @@
 - [x] **Task 13** — `key-art-composer` skill
 - [x] **Task 15** — `image-reviewer` skill
 - [x] **Task 16** — `robot-fidelity-checker` skill
-- [ ] **Task 17** — Capstone example (`examples/season-1-launch/`)
+- [x] **Task 17** — Capstone example (`examples/season-1-launch/`)
 - [ ] **Task 18** — Keep heavy media (images/video) out of the repo (external-media strategy)
 
 **Working rules:** commit after every task • build skills one at a time and pause for review •

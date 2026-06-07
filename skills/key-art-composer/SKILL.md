@@ -35,20 +35,25 @@ attach by role + description; never emit file paths.
 
 ## Inputs from the user
 
+- **Hero image** (expected) — the **approved underlying image** to compose over, attached. Standard
+  flow: it's already been made by `image-art-director` and approved by the reviewers. If no image
+  exists yet, this skill can fall back to emitting an `image-art-director` brief (see step 4).
 - **Concept** (required) — the idea to express (often a concept from `campaign-strategist`).
 - **Surface** (required) — `poster`, `social`, or `thumbnail` (sets aspect ratio + composition).
-- **Headline** (optional) — supplied copy; if absent, suggest one (or hand to `brand-writer`).
+- **Headline** (optional) — the approved copy (from `brand-writer`); if absent, suggest one.
 - **Notes** (optional) — mood, must-include elements, constraints.
 
 ## How to compose
 
 1. **Read the visual brand + surface.** Load the inputs above; lock the aspect ratio for the surface.
-2. **Set the focal hierarchy.** Decide what the eye hits first (usually the robot hero), then second
+2. **Set the focal hierarchy.** Decide what the eye hits first (usually the hero image), then second
    (headline), then third (telemetry / shape elements). Everything serves that order.
-3. **Place the system.** Position the headline (British Inserat, uppercase), the HUD/telemetry
-   layer (edges/corners), and the shape elements (chevrons/bars) using `identity.md`.
-4. **Direct the hero image.** Describe the hero image and provide a handoff prompt for
-   `image-art-director` (or note the attachment to drop in).
+3. **Place the system over the image.** Position the headline (British Inserat, uppercase), the
+   HUD/telemetry layer (edges/corners), and the shape elements (chevrons/bars) on top of the hero
+   image using `identity.md` — leaving the image to read.
+4. **Hero image.** Normally you compose over the **approved attached image**. Only if no image
+   exists yet, emit an `image-art-director` brief in `hero_image.image_art_director_handoff` so one
+   can be generated first, then re-run this skill.
 5. **Hold the look.** Greyscale only; matte; glitch/grit per `treatment.md`; generous negative space.
 6. **Deliver as JSON** in the format below.
 
@@ -76,11 +81,12 @@ Return **only a JSON object** in this shape (no prose around it):
   "shape_language": ["string — element + placement", "..."],
   "palette_treatment": "string — greyscale + glitch/grit notes",
   "hero_image": {
+    "source": "approved_attachment | needs_generation",
     "description": "string — what the hero image shows",
-    "image_art_director_handoff": "string — the subject to pass to image-art-director"
+    "image_art_director_handoff": "string — ONLY when source is needs_generation: the subject to pass to image-art-director; empty otherwise"
   },
   "attachments": [
-    { "role": "character | treatment | other", "description": "what to attach and why" }
+    { "role": "hero_image | treatment | other", "description": "what to attach and why" }
   ]
 }
 ```
@@ -118,12 +124,12 @@ Headline: "WITNESS HISTORY".
   ],
   "palette_treatment": "Greyscale only; matte black figure on near-white; restrained horizontal glitch tear off the figure's edge; light photocopy grit overall.",
   "hero_image": {
-    "description": "Hooded matte-black robot, head-on, camera-bar visor catching the light, heroic and still.",
-    "image_art_director_handoff": "hooded robot hero portrait, head-on, camera-bar visor head, matte black, dramatic, near-white backdrop"
+    "source": "approved_attachment",
+    "description": "The approved hooded matte-black robot portrait, head-on, camera-bar visor, heroic and still.",
+    "image_art_director_handoff": ""
   },
   "attachments": [
-    { "role": "character", "description": "the hooded robot portrait to lock the head and hood" },
-    { "role": "treatment", "description": "a glitch key-art frame to guide the edge-tear finish" }
+    { "role": "hero_image", "description": "the approved hooded-robot image to compose the type over" }
   ]
 }
 ```
