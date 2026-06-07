@@ -86,20 +86,20 @@ SUMMARY: On brand and ready. Pair with the master tagline as a sign-off.
 
 ## Step 4 — Underlying image prompt (`image-art-director`)
 
-The picture comes first. Take the concept's hero idea (a hooded robot portrait) and build the
+The picture comes first. Take the concept's hero idea (a hero portrait of the robot) and build the
 image-gen prompt. Surface = poster. Tool = Midjourney.
 
 **Output (JSON):**
 
 ```json
 {
-  "subject": "Hooded robot hero portrait for the Season 1 poster",
+  "subject": "Robot hero portrait for the Season 1 poster",
   "surface": "poster (portrait 2:3)",
   "tool": "Midjourney",
-  "prompt": "Head-on hero portrait of a matte-black humanoid robot in a black athletic hoodie, hood up, a horizontal camera-bar visor for a head (twin lenses, no face), heroic and still, near-white seamless backdrop. High-contrast black-and-white, matte surfaces, subtle photocopy grit, faint horizontal glitch at one edge. --ar 2:3 --style raw",
+  "prompt": "Head-on hero portrait of a matte-black humanoid robot athlete, a horizontal camera-bar visor for a head (twin lenses, no face), exposed mechanical joints, heroic and still, near-white seamless backdrop. High-contrast black-and-white, matte surfaces, subtle photocopy grit, faint horizontal glitch at one edge. --ar 2:3 --style raw",
   "negative_prompt": "color, neon, glossy, chrome, human face, eyes, helmet head, cute, toy, esports gradient, clean corporate render, text, letters, logo",
   "attachments": [
-    { "role": "character", "description": "an approved hooded-robot reference to lock the head and hood" }
+    { "role": "character", "description": "robot-solo / robot-360 to lock the character" }
   ],
   "breakdown": { "palette": "greyscale only", "composition": "2:3, centered hero, room in lower third for the headline" }
 }
@@ -132,15 +132,15 @@ Now lay the type and design system **over the approved image**. Inputs: the appr
 the approved headline (from `brand-writer` at the `tagline` surface → **"WITNESS HISTORY"**), and the
 surface = `poster`.
 
-**Output (excerpt):** a JSON layout brief — the hooded-robot image as hero, headline in the lower
-third (British Inserat), telemetry at the margins, a single chevron cluster, greyscale + edge glitch.
+**Output (excerpt):** a JSON layout brief — the robot hero image, headline in the lower third
+(British Inserat), telemetry at the margins, a single chevron cluster, greyscale + edge glitch.
 (See `key-art-composer` for the full schema.)
 
 ```json
 {
   "concept": "Witness History — the night the lab became an arena",
   "surface": "poster (A1, portrait 2:3)",
-  "layout": { "focal_point": "the approved hooded-robot image, upper third", "headline_zone": "lower third, full width" },
+  "layout": { "focal_point": "the approved robot hero image, upper third", "headline_zone": "lower third, full width" },
   "type": { "headline": "WITNESS HISTORY", "placement": "Lower third, British Inserat, uppercase" },
   "attachments": [ { "role": "hero_image", "description": "the approved Step-5 robot image to compose over" } ]
 }

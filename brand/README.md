@@ -29,6 +29,7 @@ copy must obey there. The single source for surface specs — see `surfaces/READ
 | `color.md` | Color palette with hex values. *(user-provided)* |
 | `typography.md` | Display + body type system. *(user-provided)* |
 | `robot-character.md` | The mascot: description, fidelity rules, asset references. |
+| `kits.md` | The 8 team kits and the greyscale kit system. |
 | `treatment.md` | Photographic / texture treatment (grit, xerox, glitch). |
 
 ## Evolution (`decisions/`)

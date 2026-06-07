@@ -99,7 +99,7 @@ paths. If the user has no reference images, return `"attachments": []`.
   "prompt": "A matte-black humanoid robot athlete mid bicycle-kick, body inverted in the air, striking a soccer ball — lean athletic build, exposed mechanical knee and limb joints, gloved mechanical hands, and a horizontal camera-bar visor for a head (rounded sensor slot with twin lenses, no face). Shot like a sports photograph, dramatic low angle, on a seamless mid-grey backdrop. High-contrast black-and-white, matte surfaces, with horizontal glitch/datamosh streaks trailing the motion and small monospace HUD telemetry marks at the edges. Gritty photocopy texture. --ar 1:1 --style raw",
   "negative_prompt": "color, colour, vibrant, neon, glossy, chrome, reflective, human face, eyes, mouth, helmet head, cute, toy, chibi, bulky mech suit, esports gradient, clean corporate render, text, letters, words, typography, watermark, logo",
   "attachments": [
-    { "role": "character", "description": "the matte-black robot archetype — camera-bar visor head, exposed joints — to lock the character" },
+    { "role": "character", "description": "the matte-black robot (robot-solo / robot-360) — camera-bar visor head, exposed joints — to lock the character" },
     { "role": "treatment", "description": "a high-contrast B&W glitch key-art frame to guide the finish" }
   ],
   "breakdown": {

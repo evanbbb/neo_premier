@@ -1,15 +1,33 @@
 {
   "media_library": "https://www.dropbox.com/scl/fo/vj5i6qmw8o88kjkiqpmnk/AA95hhKryhzA89U27g142b0?rlkey=ys426o4603970s2m6nqm7lyne&st=snhoww7a&dl=0",
-  "note": "All Neo Premier League media (images + video) lives in the public media library above. No binaries are committed to this repo. Reference assets by `id`; download them from the library, or attach them when running a skill in a web chatbot.",
+  "note": "All Neo Premier League media (images + video) lives in the public media library above, organised under robot/ and style/. No binaries are committed to this repo. Reference assets by `id`; download them from the library, or attach them when running a skill in a web chatbot.",
   "assets": [
-    { "id": "archetype",         "category": "robot", "type": "image", "role": "canonical character reference", "description": "Bare matte-black robot — the base every pose derives from." },
-    { "id": "hoodie",            "category": "robot", "type": "image", "role": "look",      "description": "Robot in a black athletic hoodie, full body." },
-    { "id": "hoodie-portrait",   "category": "robot", "type": "image", "role": "hero",      "description": "Hooded camera-bar head portrait — the iconic 'face' shot." },
-    { "id": "pose-uniform",      "category": "robot", "type": "image", "role": "kit",       "description": "Robot standing in the white chevron match kit." },
-    { "id": "pose-volley",       "category": "robot", "type": "image", "role": "action",    "description": "Action: side volley with the ball." },
-    { "id": "pose-bicycle-kick", "category": "robot", "type": "image", "role": "action",    "description": "Action: bicycle kick." },
-    { "id": "key-art-hero",      "category": "style", "type": "image", "role": "treatment", "description": "Hooded portrait with heavy glitch/datamosh tear — hero treatment." },
-    { "id": "key-art-header",    "category": "style", "type": "image", "role": "treatment", "description": "Two robots contesting a header over a stadium, glitch + telemetry." },
-    { "id": "key-art-poster",    "category": "style", "type": "image", "role": "system",    "description": "Finished 'NEO_STYLE' poster — shows the overlay/type + HUD system." }
+    { "id": "robot-solo",   "path": "robot/robot_model_solo.png", "category": "robot", "type": "image", "role": "canonical character", "description": "The robot on its own — clean front view. The base character." },
+    { "id": "robot-360",    "path": "robot/robot_model_360.png",  "category": "robot", "type": "image", "role": "canonical turnaround", "description": "The robot in 360 — five angles (front, 3/4, side, 3/4 back, back). The definitive character reference." },
+
+    { "id": "kit-01", "path": "robot/kits/kit_01.png", "category": "kit", "type": "image", "role": "team kit (flat)", "description": "White; black chevrons + barcode-stripe blocks." },
+    { "id": "kit-02", "path": "robot/kits/kit_02.png", "category": "kit", "type": "image", "role": "team kit (flat)", "description": "Black; all-over white liquid/marble distortion." },
+    { "id": "kit-03", "path": "robot/kits/kit_03.png", "category": "kit", "type": "image", "role": "team kit (flat)", "description": "Black; chrome/metallic petal-burst around the collar and shoulders." },
+    { "id": "kit-04", "path": "robot/kits/kit_04.png", "category": "kit", "type": "image", "role": "team kit (flat)", "description": "White; thin black pinstripes with black ringer collar/cuffs." },
+    { "id": "kit-05", "path": "robot/kits/kit_05.png", "category": "kit", "type": "image", "role": "team kit (flat)", "description": "White; a horizontal halftone gradient band across the chest." },
+    { "id": "kit-06", "path": "robot/kits/kit_06.png", "category": "kit", "type": "image", "role": "team kit (flat)", "description": "Greyscale; halftone orb motif over a vertical stripe fade." },
+    { "id": "kit-07", "path": "robot/kits/kit_07.png", "category": "kit", "type": "image", "role": "team kit (flat)", "description": "Black/grey; bold diagonal stripes, collared polo cut." },
+    { "id": "kit-08", "path": "robot/kits/kit_08.png", "category": "kit", "type": "image", "role": "team kit (flat)", "description": "Black; white vertical pinstripes with white ringer collar/cuffs." },
+
+    { "id": "kit-01-360", "path": "robot/kits/kit_01_360.png", "category": "kit", "type": "image", "role": "kit on robot (360)", "description": "Kit 01 worn on the robot — five angles." },
+    { "id": "kit-02-360", "path": "robot/kits/kit_02_360.png", "category": "kit", "type": "image", "role": "kit on robot (360)", "description": "Kit 02 worn on the robot — five angles." },
+    { "id": "kit-03-360", "path": "robot/kits/kit_03_360.png", "category": "kit", "type": "image", "role": "kit on robot (360)", "description": "Kit 03 worn on the robot — five angles." },
+    { "id": "kit-04-360", "path": "robot/kits/kit_04_360.png", "category": "kit", "type": "image", "role": "kit on robot (360)", "description": "Kit 04 worn on the robot — five angles." },
+    { "id": "kit-05-360", "path": "robot/kits/kit_05_360.png", "category": "kit", "type": "image", "role": "kit on robot (360)", "description": "Kit 05 worn on the robot — five angles." },
+    { "id": "kit-06-360", "path": "robot/kits/kit_06_360.png", "category": "kit", "type": "image", "role": "kit on robot (360)", "description": "Kit 06 worn on the robot — five angles." },
+    { "id": "kit-07-360", "path": "robot/kits/kit_07_360.png", "category": "kit", "type": "image", "role": "kit on robot (360)", "description": "Kit 07 worn on the robot — five angles." },
+    { "id": "kit-08-360", "path": "robot/kits/kit_08_360.png", "category": "kit", "type": "image", "role": "kit on robot (360)", "description": "Kit 08 worn on the robot — five angles." },
+
+    { "id": "robot-explore-a", "path": "robot/explorations/robot_model_3x3a.png", "category": "exploration", "type": "image", "role": "exploration", "description": "3x3 grid of robot model explorations (reference only, not canonical)." },
+    { "id": "robot-explore-b", "path": "robot/explorations/robot_model_3x3b.png", "category": "exploration", "type": "image", "role": "exploration", "description": "3x3 grid of robot model explorations (reference only, not canonical)." },
+
+    { "id": "key-art-hero",   "path": "style/key-art-hero.png",   "category": "style", "type": "image", "role": "treatment", "description": "Hooded portrait with heavy glitch/datamosh tear — hero treatment reference." },
+    { "id": "key-art-header", "path": "style/key-art-header.png", "category": "style", "type": "image", "role": "treatment", "description": "Two robots contesting a header over a stadium, glitch + telemetry." },
+    { "id": "key-art-poster", "path": "style/key-art-poster.png", "category": "style", "type": "image", "role": "system",    "description": "Finished 'NEO_STYLE' poster — shows the overlay/type + HUD system." }
   ]
 }

@@ -2,17 +2,18 @@
 title: Robot Character
 type: visual-character
 status: active
-updated: 2026-06-06
-source: approved media library (see assets/manifest.json); archetype = the bare robot
+updated: 2026-06-07
+source: approved media library (see assets/manifest.json); canonical = robot-solo + robot-360
 ---
 
 # Robot Character
 
-The Neo Premier League's athlete and mascot. One consistent character, shown in multiple looks.
-The canonical reference is the **`archetype`** asset in the media library (see
-[`assets/README.md`](../../assets/README.md)) — every render should trace back to it.
+The Neo Premier League's athlete and mascot. One consistent character, worn in any of the team
+kits. The canonical references are **`robot-solo`** (clean front) and **`robot-360`** (the full
+turnaround) in the media library (see [`assets/README.md`](../../assets/README.md)) — every render
+should trace back to them.
 
-## The archetype (canonical)
+## The character (canonical)
 
 A humanoid robot built like an athlete. Matte **black** throughout, greyscale only.
 
@@ -33,11 +34,13 @@ Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json) → t
 
 | Look | Asset id | Use |
 | --- | --- | --- |
-| **Archetype** | `archetype` | Canonical reference; "base" character. |
-| **Hoodie (full)** | `hoodie` | Streetwear/culture vibe; off-pitch identity. |
-| **Hoodie portrait** | `hoodie-portrait` | The iconic head-in-hood shot; avatars, hero. |
-| **Match kit** | `pose-uniform` | On-pitch: white chevron jersey + black underlayer/legs. |
-| **Action** | `pose-volley`, `pose-bicycle-kick` | Dynamic football moments. |
+| **Solo** | `robot-solo` | Canonical "base" character, clean front. |
+| **360 turnaround** | `robot-360` | Definitive reference; five angles. |
+| **Team kits** | `kit-01` … `kit-08` | The 8 team kits (flat) — see [`kits.md`](kits.md). |
+| **Kits on robot** | `kit-01-360` … `kit-08-360` | Each kit worn on the robot, in 360. |
+
+The robot wears a team kit on the upper body; the legs stay the robot's matte-black mechanical
+limbs. (The hooded glitch portrait used in treatment lives in the `key-art-hero` style asset.)
 
 ## Fidelity rules (on-model checklist)
 
@@ -48,7 +51,7 @@ A render is **on-model** when:
 2. **Matte black**, greyscale only — no color, no glossy chrome.
 3. **Athletic human proportions** — lean and agile, not bulky/boxy/toy.
 4. **Visible mechanical joints** at knees/limbs; gloved mechanical hands; sneaker-style feet.
-5. **One character** — consistent body; looks change (hoodie/kit), the robot does not.
+5. **One character** — consistent body; the kit changes, the robot does not.
 
 ## Off-model (reject)
 

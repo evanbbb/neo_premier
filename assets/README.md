@@ -15,7 +15,7 @@ chatbot, download what you need and **attach** it.
 ## How assets are referenced
 
 The repo holds only [`manifest.json`](manifest.json) — a machine-readable index of the approved
-assets. Brand files and skills refer to assets by their **`id`** (e.g. `archetype`, `key-art-hero`),
+assets. Brand files and skills refer to assets by their **`id`** (e.g. `robot-solo`, `kit-03`),
 exactly the way skills refer to brand files by filename. The id resolves to the manifest entry; the
 actual file lives in the media library above.
 
@@ -23,15 +23,16 @@ This is the same principle the whole repo uses: **reference by name, keep the th
 
 | id | category | what it is |
 | --- | --- | --- |
-| `archetype` | robot | Canonical character — the bare matte-black robot. |
-| `hoodie` | robot | Robot in a black athletic hoodie (full body). |
-| `hoodie-portrait` | robot | Hooded camera-bar head portrait (the iconic shot). |
-| `pose-uniform` | robot | Robot standing in the white chevron match kit. |
-| `pose-volley` | robot | Action: side volley. |
-| `pose-bicycle-kick` | robot | Action: bicycle kick. |
+| `robot-solo` | robot | Canonical character — the robot on its own, clean front view. |
+| `robot-360` | robot | The robot in 360 (five angles) — the definitive character reference. |
+| `kit-01` … `kit-08` | kit | The **8 team kits** (flat). One per team; all greyscale, each a distinct graphic. |
+| `kit-01-360` … `kit-08-360` | kit | Each team kit shown **on the robot**, in 360. |
+| `robot-explore-a`, `robot-explore-b` | exploration | 3×3 model exploration grids (reference only). |
 | `key-art-hero` | style | Hooded portrait with heavy glitch tear — hero treatment. |
 | `key-art-header` | style | Two robots contesting a header, glitch + telemetry. |
 | `key-art-poster` | style | Finished "NEO_STYLE" poster — overlay/type + HUD system. |
+
+The league has **8 teams**, one per kit — see [`brand/visual/kits.md`](../brand/visual/kits.md).
 
 > Binaries are git-ignored (see the repo `.gitignore`). Add new media to the library and a row to
 > `manifest.json`; don't commit image or video files.

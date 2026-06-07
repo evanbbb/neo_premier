@@ -49,6 +49,12 @@ Three worlds slam together and the friction is the point:
 Hold all three at once. Drop any one and we become something we refuse to be (see
 [`anti-patterns.md`](anti-patterns.md)): a lab demo, a hype shell, or a toy.
 
+## League structure
+
+The league fields **8 teams**, each with its own kit. The kits share one greyscale system but each
+carries a distinct graphic identity — see [`visual/kits.md`](visual/kits.md). Team names are
+generated with [`name-forge`](../skills/name-forge/SKILL.md) and paired to kits as teams are finalized.
+
 ## What we are / are not
 
 | We are | We are not |

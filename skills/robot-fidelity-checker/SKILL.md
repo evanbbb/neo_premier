@@ -13,13 +13,13 @@ evaluator can gate on it.
 
 ## Reference images (the approved set) — required
 
-The robot has **many approved versions** (different looks: archetype, hoodie, kit, …). This skill is
-image-to-image: it needs the approved robot **images** as ground truth and compares the render under
-test to them. On-model means consistent with the established character across the approved versions,
-allowing for legitimate look changes.
+The robot has **approved references** (the solo robot, the 360 turnaround, and the 8 team kits worn
+on the robot). This skill is image-to-image: it needs the approved robot **images** as ground truth
+and compares the render under test to them. On-model means consistent with the established character
+across the approved versions, allowing for legitimate look changes (a different team kit).
 
 - **The approved set** is catalogued in `manifest.json` and lives in the public **media library**
-  (Dropbox) — by id, e.g. `archetype`, `hoodie`, `pose-uniform`.
+  (Dropbox) — by id, e.g. `robot-solo`, `robot-360`, `kit-01-360`.
 - **Web chatbot:** the user **attaches** the approved reference image(s) alongside the image under
   test. More references = a more reliable check.
 - **Claude Code:** download the needed reference(s) from the media library, then run the check.
@@ -44,7 +44,7 @@ one-sentence reason:
 3. **Proportion match** — same lean, athletic build as the references (not bulky, boxy, or toy).
 4. **Articulation match** — same mechanical detailing: exposed joints, gloved hands, sneaker-style feet.
 5. **Overall consistency** — reads as the same character as one of the approved versions (a look
-   change like a hoodie or kit is fine; a different character is not).
+   change like a different team kit is fine; a different character is not).
 
 ## Verdict thresholds
 
@@ -110,12 +110,12 @@ finish. References: 3 approved images of the matte-black camera-bar robot.)*
 
 ---
 
-**User input:** *(under test: the matte-black robot in a hoodie, camera-bar visor head, exposed
-mechanical legs, greyscale. References: 3 approved images including the hoodie look.)*
+**User input:** *(under test: the matte-black robot in a team kit, camera-bar visor head, exposed
+mechanical legs, greyscale. References: `robot-solo`, `robot-360`, and `kit-04-360`.)*
 
 ```json
 {
-  "image": "Matte-black robot in a hoodie with the camera-bar visor head and exposed mechanical legs, greyscale",
+  "image": "Matte-black robot in a team kit with the camera-bar visor head and exposed mechanical legs, greyscale",
   "references_used": 3,
   "verdict": "ON_MODEL",
   "score": 5,
@@ -125,7 +125,7 @@ mechanical legs, greyscale. References: 3 approved images including the hoodie l
     { "id": 2, "name": "finish_match", "result": "PASS", "load_bearing": false, "reason": "Matte black, greyscale, no chrome — matches the references." },
     { "id": 3, "name": "proportion_match", "result": "PASS", "load_bearing": false, "reason": "Lean athletic build consistent with the references." },
     { "id": 4, "name": "articulation_match", "result": "PASS", "load_bearing": false, "reason": "Exposed knee/limb joints and mechanical legs match the references." },
-    { "id": 5, "name": "overall_consistency", "result": "PASS", "load_bearing": false, "reason": "Matches an approved version (the hoodie look); same character." }
+    { "id": 5, "name": "overall_consistency", "result": "PASS", "load_bearing": false, "reason": "Matches an approved version (a team-kit look); same character." }
   ],
   "off_model_flags": [],
   "fixes": []
