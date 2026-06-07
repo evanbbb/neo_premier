@@ -9,7 +9,7 @@
 - [x] **Task 2** — Scaffold repo structure (`README.md`, `CLAUDE.md`, dirs)
 - [x] **Task 3** — Author the text brand source (`brand/*.md`)
 - [x] **Task 4** — Capture visuals from the user + curate hero assets (`brand/visual/*`, `assets/`)
-- [ ] **Task 5** — `brand-writer` skill
+- [x] **Task 5** — `brand-writer` skill
 - [ ] **Task 6** — `copy-reviewer` skill
 - [ ] **Task 7** — `name-forge` skill
 - [ ] **Task 8** — `voice-rewriter` skill
@@ -189,8 +189,9 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
 ## Verification
 
 - **No duplicated brand text:** a signature line appears in exactly one file under `brand/`.
-- **No relative paths in skills:** `grep -rn "\.\./" skills/` returns nothing; a skill + its named
-  brand files can be attached to a web chatbot and still work.
+- **No relative paths in skills:** `grep -rn "\.\./" skills/*/SKILL.md` returns nothing — every
+  SKILL.md names its brand inputs by filename, so a skill + its named brand files can be attached
+  to a web chatbot and still work. (Nav links in `skills/README.md` are fine.)
 - **Generation skill runs:** `brand-writer` with a brief + surface returns surface-shaped copy.
 - **Governance runs end-to-end:** `brand-writer` output → `copy-reviewer`; a sample image →
   `image-reviewer`; both produce a verdict in the defined format.
