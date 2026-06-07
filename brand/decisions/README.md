@@ -1,9 +1,9 @@
 # brand/decisions/ — the evolution log
 
 The brand is **not static**. Whenever a canonical `brand/` file changes in a meaningful way, a
-dated record is written here. This is an **append-only audit trail** — add new entries, never
-rewrite old ones. The `skills/brand-evolver` skill writes these automatically; you can also add
-one by hand.
+dated record is added here. This is an **append-only audit trail** — add new entries, never rewrite
+old ones. The `skills/brand-evolver` skill **produces** a decision record (along with the proposed
+edits) for you to save into this folder; you can also write one by hand.
 
 ## File naming
 

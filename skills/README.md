@@ -1,8 +1,9 @@
 # skills/ — LLM tools that use the brand
 
 Each skill is a folder with a `SKILL.md`. A skill never hard-codes brand text; it names the
-[`brand/`](../brand/) files it needs **by filename** in a `## Brand inputs` section, so it works
-both in Claude Code (agent reads the files) and in a web chatbot (user attaches the files).
+[`brand/`](../brand/) files it needs **by filename** in a `## Brand inputs` section. To run one in a
+**web LLM chatbot**, paste the `SKILL.md` and **attach the named brand files** (plus any reference
+images from the media library). Referencing by filename — not by path — is what makes that work.
 
 ## The catalog
 

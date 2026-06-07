@@ -203,12 +203,3 @@ each should follow the same `SKILL.md` + brand-by-name conventions.
 1. **variation-generator** — from one concept, fan out N on-brand image-prompt variations (vary
    angle / mood / composition / treatment / surface) — the "design shotgun." Builds on
    `image-art-director` (underlying image, no type; JSON + attachments).
-2. **manifest-entry** — given a new approved asset, generate its `assets/manifest.json` row
-   (id, category, type, role, description) so the media-library index stays consistent.
-3. **commentary-generator** — broadcast-style play-by-play / hype lines for a match moment. Brand
-   inputs: `voice.md`, `lexicon.md`.
-4. **alt-text-writer** — accurate, on-brand alt text for a brand image (accessibility). Multimodal.
-5. **line-tightener** — trim a piece of copy to fit a surface's length limit without losing the
-   voice. Brand inputs: the matching `surfaces/` spec + `voice.md`.
-
-*(Candidates — prune or add freely.)*
