@@ -14,7 +14,7 @@
 - [x] **Task 7** — `name-forge` skill
 - [x] **Task 8** — `voice-rewriter` skill
 - [x] **Task 9** — `campaign-strategist` skill
-- [ ] **Task 10** — `brand-evolver` skill
+- [x] **Task 10** — `brand-evolver` skill
 - [ ] **Task 11** — `voice-linter` skill
 - [ ] **Task 12** — `image-art-director` skill
 - [ ] **Task 13** — `key-art-composer` skill
