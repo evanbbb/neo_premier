@@ -14,8 +14,8 @@ both in Claude Code (agent reads the files) and in a web chatbot (user attaches 
 | `campaign-strategist` | strategy | text | Generates marketing campaign ideas for an objective. |
 | `brand-evolver` | brand-transform | text | Edits the canonical brand and logs the change. |
 | `copy-reviewer` | governance | text | Scores any copy for brand fit → verdict + fixes. |
-| `image-art-director` | generation | image | Builds an on-brand image-generation prompt. |
-| `key-art-composer` | generation | image | Art-direction brief / layout for a surface. |
+| `image-art-director` | generation | image | Prompt for the **underlying image** (e.g. robots playing) — no type. |
+| `key-art-composer` | generation | image | Adds **headline + telemetry + layout** over an image; the finished key-art. |
 | `variation-generator` | generation | image | N on-brand prompt variations from one concept. |
 | `image-reviewer` | governance | image | Scores an actual image against the visual identity. |
 | `robot-fidelity-checker` | governance | image | Checks the mascot is rendered on-model. |

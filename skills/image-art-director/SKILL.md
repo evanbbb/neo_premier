@@ -5,9 +5,13 @@ description: Builds a structured, on-brand image-generation prompt for the Neo P
 
 # Neo Premier League Image Art Director
 
-Turn a subject into a ready-to-paste image-generation prompt that will produce on-brand artwork:
-the right character, the greyscale look, the glitch/HUD/grit treatment, and a negative prompt that
-keeps the model away from off-brand results.
+Turn a subject into a ready-to-paste image-generation prompt that produces the **underlying image**
+(e.g. robots playing soccer): the right character, the greyscale look, the glitch/grit treatment,
+and a negative prompt that keeps the model away from off-brand results.
+
+**Scope:** this skill makes the *picture only*. It does **not** add headlines, logos, or laid-out
+copy — image generators render type poorly, and that's a design step. To place the headline and the
+HUD/telemetry/shape system over an image, use `key-art-composer`.
 
 ## Brand inputs
 
@@ -46,10 +50,11 @@ by role and description — it never emits file paths.
      model renders the right robot.
    - **Style & treatment** — greyscale/black-and-white, matte not glossy, plus glitch/HUD/grit
      from `treatment.md` as the subject warrants.
-   - **Composition** — framing for the surface (aspect ratio, negative space, where type would go).
-   - **Type** — if in-image text is wanted, British Inserat, uppercase.
+   - **Composition** — framing for the surface (aspect ratio, negative space, and where type will
+     later be placed — leave room for it, but don't render type in the image).
 3. **Write the negative prompt** from `anti-patterns.md` + off-model rules: no color, no face/eyes,
-   no humanoid/helmet head, no chrome/gloss, no toy/cute proportions, no neon esports look.
+   no humanoid/helmet head, no chrome/gloss, no toy/cute proportions, no neon esports look — and
+   no rendered text/letters/logos (type is added later by `key-art-composer`).
 4. **Tune for the tool** — add the right params (e.g. `--ar`, `--style raw` for Midjourney).
 5. **List attachments** — describe any reference images the user should attach (by role +
    description), never as file paths.
@@ -92,7 +97,7 @@ paths. If the user has no reference images, return `"attachments": []`.
   "surface": "social key-art (square, 1:1)",
   "tool": "Midjourney",
   "prompt": "A matte-black humanoid robot athlete mid bicycle-kick, body inverted in the air, striking a soccer ball — lean athletic build, exposed mechanical knee and limb joints, gloved mechanical hands, and a horizontal camera-bar visor for a head (rounded sensor slot with twin lenses, no face). Shot like a sports photograph, dramatic low angle, on a seamless mid-grey backdrop. High-contrast black-and-white, matte surfaces, with horizontal glitch/datamosh streaks trailing the motion and small monospace HUD telemetry marks at the edges. Gritty photocopy texture. --ar 1:1 --style raw",
-  "negative_prompt": "color, colour, vibrant, neon, glossy, chrome, reflective, human face, eyes, mouth, helmet head, cute, toy, chibi, bulky mech suit, esports gradient, clean corporate render",
+  "negative_prompt": "color, colour, vibrant, neon, glossy, chrome, reflective, human face, eyes, mouth, helmet head, cute, toy, chibi, bulky mech suit, esports gradient, clean corporate render, text, letters, words, typography, watermark, logo",
   "attachments": [
     { "role": "character", "description": "the matte-black robot archetype — camera-bar visor head, exposed joints — to lock the character" },
     { "role": "treatment", "description": "a high-contrast B&W glitch key-art frame to guide the finish" }

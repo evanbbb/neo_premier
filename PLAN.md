@@ -16,7 +16,7 @@
 - [x] **Task 9** — `campaign-strategist` skill
 - [x] **Task 10** — `brand-evolver` skill
 - [x] **Task 12** — `image-art-director` skill
-- [ ] **Task 13** — `key-art-composer` skill
+- [x] **Task 13** — `key-art-composer` skill
 - [ ] **Task 14** — `variation-generator` skill
 - [ ] **Task 15** — `image-reviewer` skill
 - [ ] **Task 16** — `robot-fidelity-checker` skill
