@@ -8,9 +8,13 @@ source: Brand Details.txt (tone keywords), Brand Writer.txt (voice + examples)
 
 # Voice & Tone
 
-How the Neo Premier League sounds. This is the primary input for every text skill. Pair it with
-[`lexicon.md`](lexicon.md) (specific words) and [`anti-patterns.md`](anti-patterns.md) (what to
-avoid).
+How the Neo Premier League sounds. **This is the canonical writing style guide** — the single
+source every text skill shares so they never work against each other. `brand-writer` (generate),
+`voice-rewriter` (transform), `copy-reviewer` and `voice-linter` (govern) all read this same file,
+paired with [`lexicon.md`](lexicon.md) (specific words), [`anti-patterns.md`](anti-patterns.md)
+(what to avoid), and the relevant [`surfaces/`](surfaces/) spec (length + register). Generation and
+review judge against the same rules by construction. Edit the style here, once, and every text skill
+follows.
 
 ## Voice in one line
 
