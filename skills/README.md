@@ -16,7 +16,6 @@ both in Claude Code (agent reads the files) and in a web chatbot (user attaches 
 | `copy-reviewer` | governance | text | Scores any copy for brand fit → verdict + fixes. |
 | `image-art-director` | generation | image | Prompt for the **underlying image** (e.g. robots playing) — no type. |
 | `key-art-composer` | generation | image | Adds **headline + telemetry + layout** over an image; the finished key-art. |
-| `variation-generator` | generation | image | N on-brand prompt variations from one concept. |
 | `image-reviewer` | governance | image | Scores an actual image against the visual identity. |
 | `robot-fidelity-checker` | governance | image | Checks the mascot is rendered on-model. |
 

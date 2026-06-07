@@ -17,7 +17,6 @@
 - [x] **Task 10** — `brand-evolver` skill
 - [x] **Task 12** — `image-art-director` skill
 - [x] **Task 13** — `key-art-composer` skill
-- [ ] **Task 14** — `variation-generator` skill
 - [ ] **Task 15** — `image-reviewer` skill
 - [ ] **Task 16** — `robot-fidelity-checker` skill
 - [ ] **Task 17** — Capstone example (`examples/season-1-launch/`)
@@ -43,7 +42,7 @@ split between skills that **generate**, skills that **govern/review**, and a ski
 **transforms the brand itself** — kept flat and teachable.
 
 **Outcome:** (1) a deep, well-organized brand definition as a single shared source, (2) a curated
-set of hero assets the user selects, (3) eleven LLM-based "skills" across text and image, and
+set of hero assets the user selects, (3) ten LLM-based "skills" across text and image, and
 (4) worked examples — all reusable and designed to teach separation of concerns.
 
 ## Decisions
@@ -104,7 +103,6 @@ neo_premier/
 │   ├── copy-reviewer/SKILL.md
 │   ├── image-art-director/SKILL.md
 │   ├── key-art-composer/SKILL.md
-│   ├── variation-generator/SKILL.md
 │   ├── image-reviewer/SKILL.md
 │   └── robot-fidelity-checker/SKILL.md
 └── examples/
@@ -115,7 +113,7 @@ Every file in `brand/` gets light **YAML frontmatter** (`title`, `type`, `status
 `source`) above prose — the human reads the prose, a machine/skill reads the frontmatter. This is
 the core "machine-readable" lesson, kept deliberately simple.
 
-## The eleven skills
+## The ten skills
 
 Each is a folder with a `SKILL.md` using the same frontmatter format as a Claude Code skill
 (`name`, `description`). Each opens with a **`## Brand inputs`** section naming the brand files it
@@ -154,14 +152,19 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
 8. **key-art-composer** — art-direction brief for a surface (poster / social key art / thumbnail):
    layout, focal hierarchy, type placement, shape-language usage, asset callouts. Brand inputs:
    `identity.md`, `typography.md` + hero assets.
-9. **variation-generator** — N on-brand prompt variations from one concept. Brand inputs: the
-   `visual/*.md` files.
-
 **Image — governance (multimodal)**
-10. **image-reviewer** — reads an actual image and scores it against the `visual/*.md` files
-    (palette, type, shape language, robot fidelity, anti-patterns) → verdict.
-11. **robot-fidelity-checker** — focused multimodal check: is the mascot on-model? Brand inputs:
+9. **image-reviewer** — reads an actual image and scores it against the `visual/*.md` files
+   (palette, type, shape language, robot fidelity, anti-patterns) → verdict.
+10. **robot-fidelity-checker** — focused multimodal check: is the mascot on-model? Brand inputs:
     `robot-character.md` + the curated robot refs in `assets/robot/`.
+
+## Potential microtools (build later)
+
+Smaller, optional skills parked for a future pass — not part of the core set above.
+
+1. **variation-generator** — from one concept, fan out N on-brand image-prompt variations (vary
+   angle / mood / composition / treatment / surface) for fast exploration — the "design shotgun."
+   Builds on `image-art-director` (underlying image, no type; JSON + attachments).
 
 ## Build sequence (commit after every task)
 
@@ -169,9 +172,9 @@ output format, and worked examples. Categories: **generation**, **strategy**, **
 2. **Scaffold repo** (tree, `README.md`, `CLAUDE.md`) → commit "Scaffold repo structure".
 3. **Author `brand/*.md`** (text only) → commit "Add brand text definitions".
 4. **Capture visuals from user + assets** → commit "Add visual identity + hero assets".
-5–16. **Eleven skills, one at a time** in order: brand-writer, name-forge, voice-rewriter,
+5–16. **Ten skills, one at a time** in order: brand-writer, name-forge, voice-rewriter,
    campaign-strategist, brand-evolver, copy-reviewer, image-art-director,
-   key-art-composer, variation-generator, image-reviewer, robot-fidelity-checker. Pause for review
+   key-art-composer, image-reviewer, robot-fidelity-checker. Pause for review
    after each → commit "Add `<skill-name>` skill". (brand-writer + copy-reviewer first as the
    reference patterns.)
 17. **Capstone example** → commit "Add worked example".

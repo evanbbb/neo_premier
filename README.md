@@ -45,5 +45,5 @@ two ways:
 - **Strategy (text):** `campaign-strategist`
 - **Govern / review (text):** `copy-reviewer`
 - **Transform the brand:** `brand-evolver`
-- **Generate (image):** `image-art-director`, `key-art-composer`, `variation-generator`
+- **Generate (image):** `image-art-director`, `key-art-composer`
 - **Govern / review (image):** `image-reviewer`, `robot-fidelity-checker`
