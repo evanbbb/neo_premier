@@ -16,6 +16,11 @@ Every brand fact lives here, **once**. One fact per file. Each file opens with Y
 | `messaging.md` | Pillars, key messages, approved taglines, boilerplate. |
 | `anti-patterns.md` | What the brand avoids — in words and visuals. |
 
+## Surfaces (`surfaces/`)
+
+One file per surface (tagline, billboard, jersey, social, …), each defining the length and register
+copy must obey there. The single source for surface specs — see `surfaces/README.md`.
+
 ## Visual (`visual/`)
 
 | File | What it defines |

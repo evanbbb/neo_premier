@@ -50,19 +50,14 @@ stadium-shaking · gladiatorial · triumphant.
 
 ## Register by surface
 
-The voice is constant; the **register** shifts with the surface. Skills should pick the register
-that matches the requested surface.
+The voice is constant; the **register** shifts with the surface. Each surface has its own canonical
+spec (length + register + format) in [`surfaces/`](surfaces/) — read the matching file and obey it.
+Don't redefine length/register here; the surface file is the single source.
 
-| Surface | Register | Length | Notes |
-| --- | --- | --- | --- |
-| Tagline / headline | Maximum compression, cinematic | ≤ 10 words | Could live on a jersey or title card. |
-| OOH / billboard | Bold, declarative, instantly legible | 3–7 words | Read at 70mph. One idea. |
-| Jersey / kit | Iconic, motto-like | 1–4 words | Wearable. Tribal. |
-| Broadcast lower-third | Punchy, present-tense, high-energy | A phrase | Reads under live action. |
-| Social post | Conversational-but-electric, hooky | 1–3 sentences | First line is the hook. |
-| Teaser | Building anticipation, rising rhythm | 3–5 sentences | Ends on a challenge or question. |
-| Manifesto / announcement | Epic, declarative, high-stakes | 1–3 paragraphs | The myth of the league. |
-| Press release | Credible + electric; facts that still feel like a moment | Standard PR shape | Never goes flat or corporate. |
+Surfaces: [`tagline`](surfaces/tagline.md) · [`billboard`](surfaces/billboard.md) ·
+[`jersey`](surfaces/jersey.md) · [`broadcast-lower-third`](surfaces/broadcast-lower-third.md) ·
+[`social`](surfaces/social.md) · [`teaser`](surfaces/teaser.md) ·
+[`manifesto`](surfaces/manifesto.md) · [`press-release`](surfaces/press-release.md).
 
 ## Reference outputs (the bar)
 
