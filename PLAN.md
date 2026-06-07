@@ -15,7 +15,7 @@
 - [x] **Task 8** — `voice-rewriter` skill
 - [x] **Task 9** — `campaign-strategist` skill
 - [x] **Task 10** — `brand-evolver` skill
-- [ ] **Task 12** — `image-art-director` skill
+- [x] **Task 12** — `image-art-director` skill
 - [ ] **Task 13** — `key-art-composer` skill
 - [ ] **Task 14** — `variation-generator` skill
 - [ ] **Task 15** — `image-reviewer` skill
