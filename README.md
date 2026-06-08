@@ -42,8 +42,9 @@ A few words you'll see, in plain English:
 No coding — if you can copy, paste, and drag a file, you can do this. Example: *"I need a tagline
 for the season opener."*
 
-1. **Open the skill.** Go to [`skills/`](skills/), open the folder for the skill you want (e.g.
-   `brand-writer`), and click its `SKILL.md` file. **Select all the text and copy it.**
+1. **Open the skill.** Go to [`skills/`](skills/), open the category folder (**generation**,
+   **strategy**, **governance**, or **brand-transform**), then the skill you want (e.g.
+   `generation/brand-writer`), and click its `SKILL.md` file. **Select all the text and copy it.**
 2. **Open an AI chatbot** — [claude.ai](https://claude.ai) or ChatGPT — and **paste** it in.
 3. **Attach the brand files it asks for.** Near the top, each skill lists a few files it needs
    (e.g. `voice.md`). Download those from the [`brand/`](brand/) folder and attach them to the chat.

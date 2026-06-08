@@ -32,7 +32,7 @@ it's built on.
 
 - **Master brand:** *Built by Humans. Played by Machines.*
 - **Championship / match:** *Wires will tear. Sparks will fly. Crowns will be claimed.*
-- (Add new approved lines here as they pass [`copy-reviewer`](../skills/copy-reviewer/SKILL.md).)
+- (Add new approved lines here as they pass [`copy-reviewer`](../skills/governance/copy-reviewer/SKILL.md).)
 
 ## Boilerplate
 

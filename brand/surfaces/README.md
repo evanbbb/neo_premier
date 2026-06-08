@@ -2,7 +2,7 @@
 
 A **surface** is a place copy (or art) lives. Each surface has its own spec file defining the
 length and register it demands. These are the canonical, reusable definitions — skills like
-[`brand-writer`](../../skills/brand-writer/SKILL.md) read the matching file and obey it.
+[`brand-writer`](../../skills/generation/brand-writer/SKILL.md) read the matching file and obey it.
 
 One file per surface. Each file's frontmatter (`surface`, `length`, `register`) is the machine
 layer; the prose is the human layer.

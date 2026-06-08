@@ -60,5 +60,5 @@ A render is **on-model** when:
 - Cute/toy proportions, chibi, or bulky mech-suit bulk.
 - Fully covered limbs with no mechanical articulation (reads as a person in a suit).
 
-The [`robot-fidelity-checker`](../../skills/robot-fidelity-checker/SKILL.md) skill scores images
+The [`robot-fidelity-checker`](../../skills/governance/robot-fidelity-checker/SKILL.md) skill scores images
 against this checklist.

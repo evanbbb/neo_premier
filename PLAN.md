@@ -94,18 +94,12 @@ neo_premier/
 ├── assets/                   # NO binaries — pointer to the public media library (Dropbox)
 │   ├── README.md             #   how to get media + the asset-id table
 │   └── manifest.json         #   machine-readable index: asset id -> media library
-├── skills/                   # LLM-based tools — Claude Code SKILL.md format
-│   ├── README.md             #   catalog: generation / governance / brand-transform × text/image
-│   ├── brand-writer/SKILL.md
-│   ├── name-forge/SKILL.md
-│   ├── voice-rewriter/SKILL.md
-│   ├── campaign-strategist/SKILL.md
-│   ├── brand-evolver/SKILL.md
-│   ├── copy-reviewer/SKILL.md
-│   ├── image-art-director/SKILL.md
-│   ├── key-art-composer/SKILL.md
-│   ├── image-reviewer/SKILL.md
-│   └── robot-fidelity-checker/SKILL.md
+├── skills/                   # LLM-based tools — bucketed by category; each is a <name>/SKILL.md
+│   ├── README.md             #   catalog of the buckets
+│   ├── generation/           #   brand-writer, name-forge, voice-rewriter, image-art-director, key-art-composer
+│   ├── strategy/             #   campaign-strategist
+│   ├── governance/           #   copy-reviewer, image-reviewer, robot-fidelity-checker
+│   └── brand-transform/      #   brand-evolver
 └── examples/
     └── season-1-launch/      #   capstone: skills chained writer → art-director → reviewers
 ```
@@ -171,7 +165,7 @@ hero binaries were later purged from git history, so media lives only in the pub
 ## Verification
 
 - **No duplicated brand text:** a signature line appears in exactly one file under `brand/`.
-- **No relative paths in skills:** `grep -rn "\.\./" skills/*/SKILL.md` returns nothing — every
+- **No relative paths in skills:** `grep -rn "\.\./" skills/*/*/SKILL.md` returns nothing — every
   SKILL.md names its brand inputs by filename, so a skill + its named brand files can be attached
   to a web chatbot and still work. (Nav links in `skills/README.md` are fine.)
 - **Generation skill runs:** `brand-writer` with a brief + surface returns surface-shaped copy.

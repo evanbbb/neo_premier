@@ -65,8 +65,8 @@ never soft or utopian.
 
 ## How beliefs are used
 
-- They are the deepest test in [`copy-reviewer`](../skills/copy-reviewer/SKILL.md) and
-  [`image-reviewer`](../skills/image-reviewer/SKILL.md): does the work express a belief, or just
+- They are the deepest test in [`copy-reviewer`](../skills/governance/copy-reviewer/SKILL.md) and
+  [`image-reviewer`](../skills/governance/image-reviewer/SKILL.md): does the work express a belief, or just
   decorate one?
-- When the brand changes direction, [`brand-evolver`](../skills/brand-evolver/SKILL.md) should
+- When the brand changes direction, [`brand-evolver`](../skills/brand-transform/brand-evolver/SKILL.md) should
   reconcile the change against these beliefs and log it in [`decisions/`](decisions/).

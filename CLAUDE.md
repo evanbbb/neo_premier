@@ -23,7 +23,7 @@ for the human overview and [`PLAN.md`](PLAN.md) for the build plan + progress ch
 - Every file in `brand/` starts with light **YAML frontmatter** (`title`, `type`, `status`,
   `updated`, `source`) followed by prose. Tools read the frontmatter; humans read the prose.
 - Filenames are lowercase-kebab, no spaces.
-- The brand **evolves**: `skills/brand-evolver` edits `brand/` files and appends a dated record to
+- The brand **evolves**: `skills/brand-transform/brand-evolver` edits `brand/` files and appends a dated record to
   `brand/decisions/`. Treat `brand/decisions/` as an append-only audit log — never rewrite history.
 
 ## Media lives outside the repo
@@ -43,7 +43,8 @@ never commit images or video. When a skill needs a reference image, download it 
 
 ## Skill anatomy
 
-Each `skills/<name>/SKILL.md` has: frontmatter (`name`, `description`), a `## Brand inputs` section
-(files needed, by filename), an input contract, an output format, and worked examples. Use
-`skills/brand-writer` (generation) and `skills/copy-reviewer` (governance) as the reference
-patterns.
+Skills are bucketed by category: `skills/<category>/<name>/SKILL.md`, where `<category>` is
+`generation`, `strategy`, `governance`, or `brand-transform`. Each `SKILL.md` has: frontmatter
+(`name`, `description`), a `## Brand inputs` section (files needed, by filename), an input contract,
+an output format, and worked examples. Use `skills/generation/brand-writer` and
+`skills/governance/copy-reviewer` as the reference patterns.

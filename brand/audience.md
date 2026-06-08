@@ -54,7 +54,7 @@ clash. They came for the spectacle.
 
 ## Using audience in skills
 
-- [`campaign-strategist`](../skills/campaign-strategist/SKILL.md) targets a specific segment per
+- [`campaign-strategist`](../skills/strategy/campaign-strategist/SKILL.md) targets a specific segment per
   concept and names it explicitly.
-- [`brand-writer`](../skills/brand-writer/SKILL.md) tunes register by surface and implied segment
+- [`brand-writer`](../skills/generation/brand-writer/SKILL.md) tunes register by surface and implied segment
   (a jersey speaks to fans; a build-reveal speaks to builders).
