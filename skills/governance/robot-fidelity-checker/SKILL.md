@@ -77,7 +77,12 @@ regardless of the rest.
 
 ## Output format
 
-Return **only a JSON object** in this shape (no prose around it):
+Reply in **two parts, in this order**:
+
+1. **A plain-language verdict** — 1–2 sentences: the call (on-model / borderline / off-model) and
+   the key reason, in human terms.
+2. **The JSON object** below, in a fenced ```json block (so it stays machine-parseable). The JSON
+   must agree with the plain-language verdict.
 
 ```json
 {
@@ -109,6 +114,9 @@ reference images used and `references_used` is their count. `score` = count of P
 plus one unlabelled render to check: a cute round robot with two big glowing eyes, a smiling face,
 chrome finish.)*
 
+**Off-model.** This isn't the Neo Premier League robot — it has a smiling face instead of the
+camera-bar visor, and a glossy chrome finish instead of matte black. It misses on every check.
+
 ```json
 {
   "candidate": "The unlabelled render — cute round robot with two glowing eyes, a smiling face, and a chrome finish",
@@ -137,6 +145,9 @@ chrome finish.)*
 **User input:** *(two labelled reference images — `robot_model_360.png`, `robot_model_solo.png` —
 plus one unlabelled render to check: the matte-black robot in a team kit, camera-bar visor head,
 exposed mechanical legs, greyscale.)*
+
+**On-model.** The camera-bar head, matte-black greyscale finish, and mechanical build all match the
+references — the team kit is just a legitimate look change.
 
 ```json
 {

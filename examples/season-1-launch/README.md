@@ -133,8 +133,8 @@ the approved headline (from `brand-writer` at the `tagline` surface → **"WITNE
 surface = `poster`.
 
 **Output (excerpt):** a JSON layout brief — the robot hero image, headline in the lower third
-(British Inserat), telemetry at the margins, a single chevron cluster, greyscale + edge glitch.
-(See `key-art-composer` for the full schema.)
+(British Inserat), the NPL crest in a corner, telemetry at the margins, a single chevron cluster,
+greyscale + edge glitch. (See `key-art-composer` for the full schema.)
 
 ```json
 {
@@ -142,7 +142,11 @@ surface = `poster`.
   "surface": "poster (A1, portrait 2:3)",
   "layout": { "focal_point": "the approved robot hero image, upper third", "headline_zone": "lower third, full width" },
   "type": { "headline": "WITNESS HISTORY", "placement": "Lower third, British Inserat, uppercase" },
-  "attachments": [ { "role": "hero_image", "description": "the approved Step-5 robot image to compose over" } ]
+  "logo": { "asset": "npl-logo", "placement": "top-left corner lockup, clear space kept" },
+  "attachments": [
+    { "role": "hero_image", "description": "the approved Step-5 robot image to compose over" },
+    { "role": "logo", "description": "the npl-logo crest for the corner lockup" }
+  ]
 }
 ```
 

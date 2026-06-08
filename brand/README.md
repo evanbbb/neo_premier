@@ -26,6 +26,7 @@ copy must obey there. The single source for surface specs — see `surfaces/READ
 | File | What it defines |
 | --- | --- |
 | `identity.md` | Overall visual direction + shape / overlay language. |
+| `logo.md` | The primary logo (NPL crest) and its usage. |
 | `color.md` | Color palette with hex values. *(user-provided)* |
 | `typography.md` | Display + body type system. *(user-provided)* |
 | `robot-character.md` | The mascot: description, fidelity rules, asset references. |

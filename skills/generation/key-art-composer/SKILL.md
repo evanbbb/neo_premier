@@ -27,6 +27,7 @@ attach them):
 - `visual/color.md` — greyscale only.
 - `visual/treatment.md` — glitch / HUD / grit finishing.
 - `visual/robot-character.md` — so the hero stays on-model.
+- `visual/logo.md` — the NPL crest and how to place it (it's a finished asset — place, don't redraw).
 - The matching **surface spec** in `surfaces/` if the surface is also a copy surface (for headline
   length/register).
 
@@ -51,11 +52,13 @@ attach by role + description; never emit file paths.
 3. **Place the system over the image.** Position the headline (British Inserat, uppercase), the
    HUD/telemetry layer (edges/corners), and the shape elements (chevrons/bars) on top of the hero
    image using `identity.md` — leaving the image to read.
-4. **Hero image.** Normally you compose over the **approved attached image**. Only if no image
+4. **Place the logo.** Add the NPL crest (`npl-logo`) as a finished asset per `logo.md` — usually a
+   corner lockup with clear space; greyscale, never redrawn. Attach `npl-logo` for placement.
+5. **Hero image.** Normally you compose over the **approved attached image**. Only if no image
    exists yet, emit an `image-art-director` brief in `hero_image.image_art_director_handoff` so one
    can be generated first, then re-run this skill.
-5. **Hold the look.** Greyscale only; matte; glitch/grit per `treatment.md`; generous negative space.
-6. **Deliver as JSON** in the format below.
+6. **Hold the look.** Greyscale only; matte; glitch/grit per `treatment.md`; generous negative space.
+7. **Deliver as JSON** in the format below.
 
 ## Output format
 
@@ -80,13 +83,17 @@ Return **only a JSON object** in this shape (no prose around it):
   },
   "shape_language": ["string — element + placement", "..."],
   "palette_treatment": "string — greyscale + glitch/grit notes",
+  "logo": {
+    "asset": "npl-logo",
+    "placement": "string — where the crest sits (e.g. top-left corner lockup, clear space kept)"
+  },
   "hero_image": {
     "source": "approved_attachment | needs_generation",
     "description": "string — what the hero image shows",
     "image_art_director_handoff": "string — ONLY when source is needs_generation: the subject to pass to image-art-director; empty otherwise"
   },
   "attachments": [
-    { "role": "hero_image | treatment | other", "description": "what to attach and why" }
+    { "role": "hero_image | logo | treatment | other", "description": "what to attach and why" }
   ]
 }
 ```
@@ -102,7 +109,7 @@ Headline: "WITNESS HISTORY".
   "surface": "poster (A1, portrait 2:3)",
   "layout": {
     "composition": "Single hero robot, centered and slightly low, rising into a tall portrait frame on a near-white ground; system marks framing the edges.",
-    "focal_point": "The hooded robot, camera-bar head at the upper third — the eye lands there first.",
+    "focal_point": "The robot, camera-bar head at the upper third — the eye lands there first.",
     "headline_zone": "Lower third, full-width, baseline-anchored.",
     "telemetry_zone": "Top-left and right margins + corner registration ticks.",
     "negative_space": "Generous around the figure; the white does the breathing."
@@ -123,13 +130,18 @@ Headline: "WITNESS HISTORY".
     "Vertical mono label running up the left margin"
   ],
   "palette_treatment": "Greyscale only; matte black figure on near-white; restrained horizontal glitch tear off the figure's edge; light photocopy grit overall.",
+  "logo": {
+    "asset": "npl-logo",
+    "placement": "Top-left corner lockup, small, with clear space; greyscale, placed as-is (not redrawn)."
+  },
   "hero_image": {
     "source": "approved_attachment",
-    "description": "The approved hooded matte-black robot portrait, head-on, camera-bar visor, heroic and still.",
+    "description": "The approved matte-black robot hero portrait, head-on, camera-bar visor, heroic and still.",
     "image_art_director_handoff": ""
   },
   "attachments": [
-    { "role": "hero_image", "description": "the approved hooded-robot image to compose the type over" }
+    { "role": "hero_image", "description": "the approved robot hero image to compose the type over" },
+    { "role": "logo", "description": "the npl-logo crest to place in the corner lockup" }
   ]
 }
 ```

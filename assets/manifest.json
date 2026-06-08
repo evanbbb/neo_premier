@@ -1,7 +1,9 @@
 {
   "media_library": "https://www.dropbox.com/scl/fo/vj5i6qmw8o88kjkiqpmnk/AA95hhKryhzA89U27g142b0?rlkey=ys426o4603970s2m6nqm7lyne&st=snhoww7a&dl=0",
-  "note": "All Neo Premier League media (images + video) lives in the public media library above, organised under robot/, robot/action/, 'style references/', and 'hero images/'. No binaries are committed to this repo. Reference assets by `id`; download them from the library, or attach them when running a skill in a web chatbot.",
+  "note": "All Neo Premier League media (images + video) lives in the public media library above, organised under logo/, robot/, robot/action/, 'style references/', and 'hero images/'. No binaries are committed to this repo. Reference assets by `id`; download them from the library, or attach them when running a skill in a web chatbot.",
   "assets": [
+    { "id": "npl-logo", "path": "logo/npl_logo.png", "category": "logo", "type": "image", "role": "primary logo (crest)", "description": "Black-and-white shield crest: soccer ball + circuit traces, an 'NPL' banner, and 'EST.2099'. Greyscale; place as a finished asset, never regenerate." },
+
     { "id": "robot-solo",   "path": "robot/robot_model_solo.png", "category": "robot", "type": "image", "role": "canonical character", "description": "The robot on its own — clean front view. The base character." },
     { "id": "robot-360",    "path": "robot/robot_model_360.png",  "category": "robot", "type": "image", "role": "canonical turnaround", "description": "The robot in 360 — five angles (front, 3/4, side, 3/4 back, back). The definitive character reference." },
 

@@ -23,6 +23,7 @@ This is the same principle the whole repo uses: **reference by name, keep the th
 
 | id | category | what it is |
 | --- | --- | --- |
+| `npl-logo` | logo | Primary logo — the black-and-white NPL shield crest (see `brand/visual/logo.md`). |
 | `robot-solo` | robot | Canonical character — the robot on its own, clean front view. |
 | `robot-360` | robot | The robot in 360 (five angles) — the definitive character reference. |
 | `black-circuits` … `the-latents` | kit | The **8 team kits** (flat). One per team; all greyscale, each a distinct graphic. |
