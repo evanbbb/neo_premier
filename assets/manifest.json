@@ -1,6 +1,6 @@
 {
   "media_library": "https://www.dropbox.com/scl/fo/vj5i6qmw8o88kjkiqpmnk/AA95hhKryhzA89U27g142b0?rlkey=ys426o4603970s2m6nqm7lyne&st=snhoww7a&dl=0",
-  "note": "All Neo Premier League media (images + video) lives in the public media library above, organised under robot/, robot/action/, style/, and 'hero images/'. No binaries are committed to this repo. Reference assets by `id`; download them from the library, or attach them when running a skill in a web chatbot.",
+  "note": "All Neo Premier League media (images + video) lives in the public media library above, organised under robot/, robot/action/, 'style references/', and 'hero images/'. No binaries are committed to this repo. Reference assets by `id`; download them from the library, or attach them when running a skill in a web chatbot.",
   "assets": [
     { "id": "robot-solo",   "path": "robot/robot_model_solo.png", "category": "robot", "type": "image", "role": "canonical character", "description": "The robot on its own — clean front view. The base character." },
     { "id": "robot-360",    "path": "robot/robot_model_360.png",  "category": "robot", "type": "image", "role": "canonical turnaround", "description": "The robot in 360 — five angles (front, 3/4, side, 3/4 back, back). The definitive character reference." },
@@ -34,9 +34,9 @@
     { "id": "hero-01", "path": "hero images/hero-01.png", "category": "hero", "type": "image", "role": "hero image (art-director output, no type)", "description": "Single robot striking the ball, heavy glitch, landscape. A hero image from image-art-director — no headline/type." },
     { "id": "hero-02", "path": "hero images/hero-02.png", "category": "hero", "type": "image", "role": "hero image (art-director output, no type)", "description": "Two robots in a sliding tackle, heavy glitch, landscape. A hero image from image-art-director — no headline/type." },
 
-    { "id": "neo-style-1", "path": "style/neo_style_1.png", "category": "style", "type": "image", "role": "look/treatment board", "description": "Hooded robot — full body + portrait — with glitch/datamosh. The hooded hero treatment." },
-    { "id": "neo-style-2", "path": "style/neo_style_2.png", "category": "style", "type": "image", "role": "look/treatment board", "description": "Four-up grid of robot + glitch style frames." },
-    { "id": "neo-style-3", "path": "style/neo_style_3.png", "category": "style", "type": "image", "role": "look/treatment board", "description": "Two robots playing (duel + header) over a stadium, glitch + telemetry." },
+    { "id": "neo-style-1", "path": "style references/neo_style_1.png", "category": "style", "type": "image", "role": "look/treatment board", "description": "Hooded robot — full body + portrait — with glitch/datamosh. The hooded hero treatment." },
+    { "id": "neo-style-2", "path": "style references/neo_style_2.png", "category": "style", "type": "image", "role": "look/treatment board", "description": "Four-up grid of robot + glitch style frames." },
+    { "id": "neo-style-3", "path": "style references/neo_style_3.png", "category": "style", "type": "image", "role": "look/treatment board", "description": "Two robots playing (duel + header) over a stadium, glitch + telemetry." },
 
     { "id": "robot-explore-a", "path": "robot/explorations/robot_model_3x3a.png", "category": "exploration", "type": "image", "role": "exploration", "description": "3x3 grid of robot model explorations (reference only, not canonical)." },
     { "id": "robot-explore-b", "path": "robot/explorations/robot_model_3x3b.png", "category": "exploration", "type": "image", "role": "exploration", "description": "3x3 grid of robot model explorations (reference only, not canonical)." }

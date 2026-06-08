@@ -11,27 +11,47 @@ the written character spec; fidelity here is **image-to-image**. It judges the c
 palette, composition, or treatment (that's `image-reviewer`). Outputs JSON so a deterministic
 evaluator can gate on it.
 
-## Reference images (the approved set) — required
+## How to run it (web app — ChatGPT, Gemini, etc.)
 
-The robot has **approved references** (the solo robot, the 360 turnaround, and the 8 team kits worn
-on the robot). This skill is image-to-image: it needs the approved robot **images** as ground truth
-and compares the render under test to them. On-model means consistent with the established character
-across the approved versions, allowing for legitimate look changes (a different team kit).
+This skill is **image-to-image**: it compares the render against approved reference images, not a
+text description. In your chat:
 
-- **The approved set** is catalogued in `manifest.json` and lives in the public **media library**
-  (Dropbox) — by id, e.g. `robot-solo`, `robot-360`, `black-circuits-360`.
-- **Web chatbot:** the user **attaches** the approved reference image(s) alongside the image under
-  test. More references = a more reliable check.
-- **Claude Code:** download the needed reference(s) from the media library, then run the check.
+1. Paste this `SKILL.md`.
+2. **Attach the approved reference images** (the list below).
+3. **Attach the image to check** (the candidate render).
+4. Send.
 
-If no reference images are supplied, **ask for them** — this check does not run against a text
-description.
+**Which image is the candidate — the odd-one-out rule.** You do **not** need to rely on attachment
+order. The approved reference images carry their **filename printed on the image as a visible label**
+— `robot_model_360.png` and `robot_model_solo.png`. So:
 
-## Inputs from the user
+- An attached image **with one of those labels** is a **reference** — read the label to know which one.
+- The attached image **without such a label** (a fresh render) is the **candidate**.
 
-- **Image** (required) — attached; the render to check.
-- **Approved references** (required, one or more) — attached in a web chatbot, or downloaded from
-  the media library (see `manifest.json`) in Claude Code.
+Identify the candidate as the image that is **not** one of the labelled references, then read each
+reference's label to populate the `references` list. **If you cannot tell which image is the
+unlabelled candidate (e.g. none or more than one lack a label), ask before scoring** — never guess.
+If no reference images are attached at all, ask for them (this check does not run against a text
+description).
+
+## The reference set (attach these)
+
+Pull these from the public **media library** and attach them — each carries its filename as an
+on-image label so the skill can read it. Both together are ideal; `robot_model_360.png` alone is a
+strong minimum.
+
+| Attach | On-image label | Why |
+| --- | --- | --- |
+| **360 turnaround** | `robot_model_360.png` | Five angles of the bare robot — the single best reference. |
+| **Solo front** | `robot_model_solo.png` | Clean front view of the bare robot. |
+
+These bare-robot references carry the labels, so the unlabelled new render is unambiguously the
+candidate. If the candidate wears a team kit, you may also attach that team's kit-on-robot 360 as an
+extra reference — but it is **not** labelled, so tell the model it's a reference (otherwise there are
+two unlabelled images and the skill will ask which to check).
+
+On-model means consistent with the established character across these references, allowing a
+legitimate look change (a different team kit).
 
 ## The checks (visual comparison to the approved images)
 
@@ -61,7 +81,8 @@ Return **only a JSON object** in this shape (no prose around it):
 
 ```json
 {
-  "image": "string — one-line description of the robot in the image",
+  "candidate": "string — the unlabelled candidate image + a one-line description of the robot in it",
+  "references": ["string — each reference used, by the label read from its image, e.g. robot_model_360.png"],
   "references_used": 0,
   "verdict": "ON_MODEL | BORDERLINE | OFF_MODEL",
   "score": 0,
@@ -78,18 +99,21 @@ Return **only a JSON object** in this shape (no prose around it):
 }
 ```
 
-`references_used` = how many approved reference images the check compared against. `score` = count of
-PASS; `off_model_flags` and `fixes` are empty when the verdict is `ON_MODEL`.
+`candidate` echoes which attachment was judged (so you can catch a mix-up). `references` lists the
+reference images used and `references_used` is their count. `score` = count of PASS;
+`off_model_flags` and `fixes` are empty when the verdict is `ON_MODEL`.
 
 ## Examples
 
-**User input:** *(under test: a cute round robot with two big glowing eyes and a smiling face, chrome
-finish. References: 3 approved images of the matte-black camera-bar robot.)*
+**User input:** *(two labelled reference images — `robot_model_360.png`, `robot_model_solo.png` —
+plus one unlabelled render to check: a cute round robot with two big glowing eyes, a smiling face,
+chrome finish.)*
 
 ```json
 {
-  "image": "Cute round robot with two glowing eyes, a smiling face, and a chrome finish",
-  "references_used": 3,
+  "candidate": "The unlabelled render — cute round robot with two glowing eyes, a smiling face, and a chrome finish",
+  "references": ["robot_model_360.png", "robot_model_solo.png"],
+  "references_used": 2,
   "verdict": "OFF_MODEL",
   "score": 0,
   "max_score": 5,
@@ -110,13 +134,15 @@ finish. References: 3 approved images of the matte-black camera-bar robot.)*
 
 ---
 
-**User input:** *(under test: the matte-black robot in a team kit, camera-bar visor head, exposed
-mechanical legs, greyscale. References: `robot-solo`, `robot-360`, and `the-assembly-line-360`.)*
+**User input:** *(two labelled reference images — `robot_model_360.png`, `robot_model_solo.png` —
+plus one unlabelled render to check: the matte-black robot in a team kit, camera-bar visor head,
+exposed mechanical legs, greyscale.)*
 
 ```json
 {
-  "image": "Matte-black robot in a team kit with the camera-bar visor head and exposed mechanical legs, greyscale",
-  "references_used": 3,
+  "candidate": "The unlabelled render — matte-black robot in a team kit with the camera-bar visor head and exposed mechanical legs, greyscale",
+  "references": ["robot_model_360.png", "robot_model_solo.png"],
+  "references_used": 2,
   "verdict": "ON_MODEL",
   "score": 5,
   "max_score": 5,
