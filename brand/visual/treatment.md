@@ -19,7 +19,7 @@ signal is breaking under the speed of the moment.
 - **Direction:** primarily horizontal streaks; can trail off one edge of the figure.
 - **Intensity:** purposeful, not total — enough to convey speed/signal, never so much the athlete
   is lost. Tie the tear to motion (a kick, a header).
-- **Reference:** `key-art-hero`, `key-art-header` (media library).
+- **Reference:** `neo-style-1`, `hero-01`, `hero-02` (media library).
 
 ## 2. HUD / telemetry overlay
 
@@ -29,7 +29,7 @@ packet counts, registration ticks, vertical side text.
 
 - Sits at the edges and corners; frames, never crowds.
 - Set small, in `ash`/`graphite`, monospace.
-- **Reference:** `key-art-poster` (media library).
+- **Reference:** `neo-style-3` (media library).
 
 ## 3. Grit / xerox
 

@@ -40,7 +40,7 @@ Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json) → t
 | **Kits on robot** | `<team>-360` (e.g. `forge-union-360`) | Each kit worn on the robot, in 360. |
 
 The robot wears a team kit on the upper body; the legs stay the robot's matte-black mechanical
-limbs. (The hooded glitch portrait used in treatment lives in the `key-art-hero` style asset.)
+limbs. (The hooded glitch portrait used in treatment lives in the `neo-style-1` style board.)
 
 ## Fidelity rules (on-model checklist)
 

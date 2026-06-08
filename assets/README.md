@@ -27,10 +27,10 @@ This is the same principle the whole repo uses: **reference by name, keep the th
 | `robot-360` | robot | The robot in 360 (five angles) — the definitive character reference. |
 | `black-circuits` … `the-latents` | kit | The **8 team kits** (flat). One per team; all greyscale, each a distinct graphic. |
 | `<team>-360` | kit | Each team kit shown **on the robot**, in 360 (e.g. `forge-union-360`). |
+| `action-01` … `action-07` | action | Clean action shots — strikes, duels, tackles, headers — on grey. |
+| `hero-01`, `hero-02` | hero | Hero images from the art director — glitch, **no type** (single striker; sliding tackle). |
+| `neo-style-1` … `neo-style-3` | style | Canonical look/treatment boards (hooded hero; style grid; match). |
 | `robot-explore-a`, `robot-explore-b` | exploration | 3×3 model exploration grids (reference only). |
-| `key-art-hero` | style | Hooded portrait with heavy glitch tear — hero treatment. |
-| `key-art-header` | style | Two robots contesting a header, glitch + telemetry. |
-| `key-art-poster` | style | Finished "NEO_STYLE" poster — overlay/type + HUD system. |
 
 The league has **8 teams**, one per kit — see [`brand/visual/kits.md`](../brand/visual/kits.md).
 

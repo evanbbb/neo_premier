@@ -33,7 +33,8 @@ dangerous.
 
 ## Shape & overlay language
 
-The recurring graphic vocabulary (seen across the `key-art-*` assets and the match kit):
+The recurring graphic vocabulary (seen across the `neo-style-*` boards, the `hero-*` images, and
+the match kits):
 
 - **Chevrons** — sharp downward angle-stacks (the kit's chest mark). Aggression, momentum, rank.
 - **Bars / barcode stripes** — clusters of hard rectangular strokes. Data, speed, signal.
@@ -57,7 +58,7 @@ elements + a telemetry layer + (optionally) a glitch tear.
 
 Asset ids resolve via [`assets/manifest.json`](../../assets/manifest.json) → the media library.
 
-- Hero treatment: `key-art-hero`
-- Full system on a poster: `key-art-poster`
-- Match energy: `key-art-header`
+- Look / treatment boards: `neo-style-1` (hooded hero), `neo-style-2` (grid), `neo-style-3` (match)
+- Hero images (art-director, no type): `hero-01` (single, striking), `hero-02` (two, sliding tackle)
+- Action photography: `action-01` … `action-07`
 - The athlete: `robot-solo`, `robot-360`, and the 8 team kits (see [`kits.md`](kits.md))
